@@ -19,7 +19,6 @@ class CreateGuestInfosTable extends Migration
             $table->string('vorname');
             $table->string('email');
             $table->bigInteger('telefon');
-            $table->string('resKey');   
             $table->timestamps();
         });
     }

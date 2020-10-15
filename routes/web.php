@@ -20,7 +20,11 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+
+
+
+
 Route::get('/restaurant', 'RestaurantController@create')->name('restaurant');
-Route::post('/restaurant', 'RestaurantController@create')->name('restaurant');
-Route::get('/corona.tiplify.de/form/{key}', 'GuestController@fill')->name('guest');
-Route::post('/corona.tiplify.de/form/{key}', 'GuestController@fill')->name('guest');
+Route::post('/restaurant', 'RestaurantController@create')->name('restaurant.store');
+Route::get('/form/{key}', 'GuestController@view_form')->name('view_form');
+Route::post('/form/submit', 'GuestController@fill')->name('corona_form.submit');

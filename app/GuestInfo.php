@@ -3,8 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class GuestInfo extends Model
 {
-    protected $guarded=[];
+    use Notifiable;
+
+    protected $guarded = [];
 }

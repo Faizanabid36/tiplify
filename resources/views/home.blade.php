@@ -13,8 +13,14 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                     {{ __('You are logged in!') }}
+                    <p>
+                        Use the link to fill the form:
+                        <br>
+                        <a href="{{route('view_form',$user->restaurant->unique_key)}}">
+                            {{route('view_form',$user->restaurant->unique_key)}}
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>

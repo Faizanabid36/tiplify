@@ -2,25 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Restaurants;
-use Session;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Keygen\Keygen;
+
 class RestaurantController extends Controller
 {
-    
+
     public function create(Request $request)
     {
         if ($request->isMethod('post')) {
-            $attr=array_merge($request->except('_token'),array("uniqueKey"=>Keygen::alphanum(6)->generate()));
-            $restaurant=Restaurants::create($attr);
-            Session::put('resid',$restaurant->id);
+            $this->validate($request, [
+                'firmname' => 'required|max:128',
+                'land' => 'required|max:128',
+                'state' => 'required|max:128',
+                'plz' => 'required|max:128',
+                'ort' => 'required|max:128',
+                'telefon' => 'required|max:64',
+            ]);
+            $request->merge(['unique_key' => Keygen::alphanum(8)->generate()]);
+            $restaurant = Restaurants::create($request->except('_token'));
+            Session::put('resid', $restaurant->id);
             return redirect()->route('register');
-        }
-        else 
-        {
+        } else
             return view('registerRes');
-        }
-        
     }
 }

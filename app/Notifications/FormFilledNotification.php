@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class FormFilledNotification extends Notification
+class FormFilledNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
@@ -16,6 +16,10 @@ class FormFilledNotification extends Notification
      *
      * @return void
      */
+
+    public $data;
+
+
     public function __construct()
     {
         //
@@ -24,7 +28,7 @@ class FormFilledNotification extends Notification
     /**
      * Get the notification's delivery channels.
      *
-     * @param  mixed  $notifiable
+     * @param mixed $notifiable
      * @return array
      */
     public function via($notifiable)
@@ -41,9 +45,10 @@ class FormFilledNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+            ->subject('You\'ve filled the form')
+            ->line('The introduction to the notification.')
+            ->action('Notification Action', url('/'))
+            ->line('Thank you for using our application!');
     }
 
     /**

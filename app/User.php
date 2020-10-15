@@ -16,7 +16,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','res_id'
+        'name', 'email', 'password', 'res_id', 'surname'
     ];
 
     /**
@@ -36,6 +36,12 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function restaurant()
+    {
+        return $this->hasOne(Restaurants::class, 'id', 'res_id');
+    }
 
 
     protected static function boot()
