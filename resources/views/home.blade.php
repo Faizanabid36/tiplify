@@ -17,9 +17,16 @@
                     <p>
                         Use the link to fill the form:
                         <br>
-                        <a href="{{route('view_form',$user->restaurant->unique_key)}}">
-                            {{route('view_form',$user->restaurant->unique_key)}}
+                        <a href="{{route('corona_form.view',$user->restaurant->unique_key)}}">
+                            {{route('corona_form.view',$user->restaurant->unique_key)}}
                         </a>
+                        <p>
+                            <button class="btn btn-primary">
+                                <a class="text-white" href="{{route('download.xlsx')}}">
+                                    Download Excel Sheet
+                                </a>
+                            </button>
+                        </p>
                     </p>
                 </div>
             </div>

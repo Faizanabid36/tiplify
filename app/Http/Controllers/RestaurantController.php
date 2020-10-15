@@ -12,20 +12,22 @@ class RestaurantController extends Controller
 
     public function create(Request $request)
     {
-        if ($request->isMethod('post')) {
-            $this->validate($request, [
-                'firmname' => 'required|max:128',
-                'land' => 'required|max:128',
-                'state' => 'required|max:128',
-                'plz' => 'required|max:128',
-                'ort' => 'required|max:128',
-                'telefon' => 'required|max:64',
-            ]);
-            $request->merge(['unique_key' => Keygen::alphanum(8)->generate()]);
-            $restaurant = Restaurants::create($request->except('_token'));
-            Session::put('resid', $restaurant->id);
-            return redirect()->route('register');
-        } else
-            return view('registerRes');
+        return view('registerRes');
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'firmname' => 'required|max:128',
+            'land' => 'required|max:128',
+            'state' => 'required|max:128',
+            'plz' => 'required|max:128',
+            'ort' => 'required|max:128',
+            'telefon' => 'required|max:64',
+        ]);
+        $request->merge(['unique_key' => Keygen::alphanum(8)->generate()]);
+        $restaurant = Restaurants::create($request->except('_token'));
+        Session::put('resid', $restaurant->id);
+        return redirect()->route('register');
     }
 }

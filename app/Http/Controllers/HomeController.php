@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Maatwebsite\Excel\Facades\Excel;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth', 'verified']);
     }
 
     /**
@@ -25,5 +26,10 @@ class HomeController extends Controller
     {
         $user = User::whereId(auth()->user()->id)->with('restaurant')->first();
         return view('home', compact('user'));
+    }
+
+    public function download()
+    {
+        return Excel::download(new \App\Exports\GuestInfoExport(), 'users.xlsx');
     }
 }

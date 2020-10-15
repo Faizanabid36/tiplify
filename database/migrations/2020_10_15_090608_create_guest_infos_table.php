@@ -14,11 +14,12 @@ class CreateGuestInfosTable extends Migration
     public function up()
     {
         Schema::create('guest_infos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('name');
             $table->string('vorname');
             $table->string('email');
             $table->bigInteger('telefon');
+            $table->integer('res_id');
             $table->timestamps();
         });
     }

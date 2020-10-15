@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,9 +23,12 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
 
+Route::get('restaurant', 'RestaurantController@create')->name('restaurant');
+Route::post('restaurant', 'RestaurantController@store')->name('restaurant.store');
 
+Route::name('corona_form.')->prefix('form')->group(function () {
+    Route::get('{key}', 'GuestController@view_form')->name('view');
+    Route::post('submit', 'GuestController@fill')->name('submit');
+});
 
-Route::get('/restaurant', 'RestaurantController@create')->name('restaurant');
-Route::post('/restaurant', 'RestaurantController@create')->name('restaurant.store');
-Route::get('/form/{key}', 'GuestController@view_form')->name('view_form');
-Route::post('/form/submit', 'GuestController@fill')->name('corona_form.submit');
+Route::get('downlaod', 'HomeController@download')->name('download.xlsx');
