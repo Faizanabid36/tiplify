@@ -17,6 +17,8 @@
                     <p>
                         Use the link to fill the form:
                         <br>
+                            <img src="/qrcodes/{{$user->restaurant->unique_key}}.svg" alt="QRCode" width="200px" height="200px">
+                            <br>
                         <a href="{{route('corona_form.view',$user->restaurant->unique_key)}}">
                             {{route('corona_form.view',$user->restaurant->unique_key)}}
                         </a>
@@ -24,6 +26,11 @@
                             <button class="btn btn-primary">
                                 <a class="text-white" href="{{route('download.xlsx')}}">
                                     Download Excel Sheet
+                                </a>
+                            </button>
+                            <button class="btn btn-primary">
+                                <a class="text-white" href="{{route('pdf.view')}}">
+                                    View PDF
                                 </a>
                             </button>
                         </p>

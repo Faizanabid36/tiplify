@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
 
 class GuestInfo extends Model
 {
@@ -16,9 +17,10 @@ class GuestInfo extends Model
 
     public static function getExportRecord()
     {
-        return GuestInfo::select('id', 'name', 'vorname', 'email', 'telefon', 'created_at')
-            ->whereResId(auth()->user()->restaurant->id)
-            ->orderBy('created_at', 'DESC')->get()->toArray();
+        // return GuestInfo::select('id', 'name', 'vorname', 'email', 'telefon', 'created_at')
+        //     ->whereResId(auth()->user()->restaurant->id)
+        //     ->orderBy('created_at', 'DESC')->get()->toArray();
+        return DB::select("select id, name, vorname,email,telefon,created_at FROM guest_infos where (SELECT To_days(curdate()))-To_days(DATE(created_at))<=30 order by created_at desc");
     }
 
     public function restaurant()
