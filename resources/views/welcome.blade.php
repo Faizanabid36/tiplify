@@ -71,11 +71,8 @@
                     <a href="{{ url('/home') }}">Home</a>
                 @else
                     <a href="{{ route('login') }}">Login</a>
-
-                    @if (Route::has('restaurant'))
 {{--                        <a href="/restaurant">Register</a>--}}
                         <a href="{{route('restaurant')}}">Register</a>
-                    @endif
                 @endauth
             </div>
         @endif

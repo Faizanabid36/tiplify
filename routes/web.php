@@ -23,7 +23,7 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
 
-Route::get('restaurant', 'RestaurantController@create')->name('mmmmmmmmmmmmmmmm');
+Route::get('restaurant', 'RestaurantController@create')->name('restaurant');
 Route::post('restaurant', 'RestaurantController@store')->name('restaurant.store');
 
 Route::name('corona_form.')->prefix('form')->group(function () {
