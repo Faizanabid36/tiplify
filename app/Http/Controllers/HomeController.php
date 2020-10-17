@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\CustomClass\Methods;
 use Maatwebsite\Excel\Facades\Excel;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 class HomeController extends Controller
@@ -26,9 +27,11 @@ class HomeController extends Controller
     {
         $user = User::whereId(auth()->user()->id)->with('restaurant')->first();
         $key=$user->restaurant->unique_key;
-        //To paste in pdf we have to download qrcode in png. To download qr code in png we have to install imagick extension
-        QrCode::size(200)->format('svg')->generate(route('corona_form.view',$key),public_path('qrcodes/'.$key.'.svg'));
-        return view('home', compact('user'));
+        $filepath=Methods::get_path('/qrcodes/'.$key.'.svg');
+        if (!file_exists($filepath)){
+            QrCode::size(200)->format('svg')->generate(route('corona_form.view',$key),$filepath);
+        }
+             return view('home', compact('user'));
     }
 
     public function download()
