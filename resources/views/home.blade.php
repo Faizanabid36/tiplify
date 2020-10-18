@@ -17,7 +17,7 @@
                     <p>
                         Use the link to fill the form:
                         <br>
-                            <img src="/qrcodes/{{$user->restaurant->unique_key}}.svg" alt="QRCode" width="200px" height="200px">
+                            <img src="{{$user->qr_code_path}}" alt="QRCode" width="200px" height="200px">
                             <br>
                         <a href="{{route('corona_form.view',$user->restaurant->unique_key)}}">
                             {{route('corona_form.view',$user->restaurant->unique_key)}}

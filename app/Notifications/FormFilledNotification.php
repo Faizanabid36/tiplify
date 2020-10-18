@@ -46,7 +46,7 @@ class FormFilledNotification extends Notification implements ShouldQueue
     {
         return (new MailMessage)
             ->subject('You\'ve filled the form')
-            ->line('The introduction to the notification.')
+            ->line('You have successfully submitted the form.')
             ->action('Notification Action', url('/'))
             ->line('Thank you for using our application!');
     }

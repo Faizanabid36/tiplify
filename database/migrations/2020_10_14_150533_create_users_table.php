@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->integer('res_id')->unsigned();
             $table->foreign('res_id')->references('id')->on('restaurants');
+            $table->string('qr_code_path');
             $table->rememberToken();
             $table->timestamps();
         });

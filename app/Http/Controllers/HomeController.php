@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
 use App\CustomClass\Methods;
+use App\User;
 use Maatwebsite\Excel\Facades\Excel;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+
 class HomeController extends Controller
 {
     /**
@@ -25,13 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = User::whereId(auth()->user()->id)->with('restaurant')->first();
-        $key=$user->restaurant->unique_key;
-        $filepath=Methods::get_path('/qrcodes/'.$key.'.svg');
-        if (!file_exists($filepath)){
-            QrCode::size(200)->format('svg')->generate(route('corona_form.view',$key),$filepath);
-        }
-             return view('home', compact('user'));
+        $user = auth()->user();
+        return view('home', compact('user'));
     }
 
     public function download()

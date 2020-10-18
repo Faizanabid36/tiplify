@@ -45,7 +45,7 @@
                             </li>
                             @if (Route::has('restaurant'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/restaurant">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{route('restaurant')}}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
