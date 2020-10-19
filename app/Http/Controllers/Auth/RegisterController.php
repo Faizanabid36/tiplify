@@ -69,16 +69,16 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $res = Restaurants::whereId($data['res_id'])->first();
-        $filepath = Methods::get_path('/qrcodes/' . $res->unique_key . '.png');
+        $filepath = Methods::get_path('/qrcodes/' . $res->unique_key . '.svg');
         if (!file_exists($filepath))
-            QrCode::size(200)->format('png')->generate(route('corona_form.view', $res->unique_key), $filepath);
+            QrCode::size(200)->format('svg')->generate(route('corona_form.view', $res->unique_key), $filepath);
         return User::create([
             'name' => $data['name'],
             'surname' => $data['surname'],
             'email' => $data['email'],
             'res_id' => $data['res_id'],
             'password' => Hash::make($data['password']),
-            'qr_code_path' => asset('/qrcodes/' . $res->unique_key . '.png')
+            'qr_code_path' => asset('/qrcodes/' . $res->unique_key . '.svg')
         ]);
     }
 

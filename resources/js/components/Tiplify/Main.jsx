@@ -11,10 +11,13 @@ export default class Main extends React.Component {
                             <div className="card-header">I am Main Component</div>
                             <div className="card-body">I am Main Component Body</div>
                             <button>
-                                <a href="/component1">Component 1</a>
+                                <a href="/login_react">Login Page</a>
                             </button>
                             <button>
-                                <a href="/component2">Component 2</a>
+                                <a href="/component1_react">Component 1</a>
+                            </button>
+                            <button>
+                                <a href="/component2_react">Component 2</a>
                             </button>
                         </div>
                     </div>
