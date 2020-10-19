@@ -37,3 +37,8 @@ Route::name('pdf.')->prefix('pdf')->middleware(['auth', 'verified'])->group(func
     Route::get('/', 'PDFController@view_pdf')->name('view');
     Route::get('download', 'PDFController@download_pdf')->name('download');
 });
+
+Route::get('myapp', function () {
+    return view('myapp');
+});
+Route::view('/{path?}', 'myapp');
