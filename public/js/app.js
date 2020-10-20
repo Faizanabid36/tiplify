@@ -70974,6 +70974,15 @@ var Login = /*#__PURE__*/function (_React$Component) {
       return inputChange;
     }()
   }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      axios__WEBPACK_IMPORTED_MODULE_4___default.a.get('test').then(function (res) {
+        console.log(res);
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {

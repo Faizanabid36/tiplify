@@ -30,6 +30,15 @@ export default class Login extends React.Component {
         await this.setState({[e.target.name]: e.target.value})
         console.log(this.state)
     }
+    componentDidMount() {
+        axios.get('test')
+            .then((res)=>{
+                console.log(res)
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+    }
 
 
     render() {

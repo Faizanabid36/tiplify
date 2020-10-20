@@ -25,7 +25,6 @@ class GuestController extends Controller
     public function view_form($key)
     {
         $restaurant = Restaurants::whereUniqueKey($key)->firstOrFail();
-        return compact('restaurant');
-//        return view('corona_form', compact('restaurant'));
+        return view('corona_form', compact('restaurant'));
     }
 }

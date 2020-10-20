@@ -37,7 +37,6 @@
 {{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
 </head>
 <body>
-<h1>Faizazn</h1>
 <div id="app">
 
     <script src="{{asset('assets/js/jquery.min.js')}}"></script>
