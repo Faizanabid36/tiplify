@@ -41,5 +41,17 @@ Route::name('pdf.')->prefix('pdf')->middleware(['auth', 'verified'])->group(func
 Route::get('myapp', function () {
     return view('myapp');
 });
+Route::get('testing_here', function () {
+    \QrCode::size(500)
+        ->format('png')
+        ->generate('ItSolutionStuff.com', public_path('qrcodes.png'));
+
+    return view('qrCode');
+
+});
+
+
 
 Route::view('/{path?}', 'myapp');
+
+
