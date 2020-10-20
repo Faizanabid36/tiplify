@@ -43,8 +43,8 @@ Route::get('myapp', function () {
 });
 Route::get('testing_here', function () {
     \QrCode::size(500)
-        ->format('png')
-        ->generate('ItSolutionStuff.com', public_path('qrcodes.png'));
+        ->format('jpg')
+        ->generate('ItSolutionStuff.com', public_path('qrcodes.jpg'));
 
     return view('qrCode');
 
