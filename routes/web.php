@@ -28,7 +28,7 @@ Route::post('restaurant', 'RestaurantController@store')->name('restaurant.store'
 
 Route::name('corona_form.')->prefix('form')->group(function () {
     Route::get('{key}', 'GuestController@view_form')->name('view');
-    Route::post('submit', 'GuestController@fill')->name('submit');
+    Route::post('submit', 'GuestController@fill')->name('submit')           ;
 });
 
 Route::get('downlaod', 'HomeController@download')->name('download.xlsx');
@@ -41,4 +41,5 @@ Route::name('pdf.')->prefix('pdf')->middleware(['auth', 'verified'])->group(func
 Route::get('myapp', function () {
     return view('myapp');
 });
+
 Route::view('/{path?}', 'myapp');

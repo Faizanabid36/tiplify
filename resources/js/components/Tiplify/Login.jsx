@@ -17,7 +17,7 @@ export default class Login extends React.Component {
 
     submitForm(e) {
         let {email, password} = this.state
-        axios.post('login', {email, password})
+        axios.post('api/login', {email, password})
             .then((res) => {
                 console.log(res.data)
             })

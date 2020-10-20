@@ -70936,7 +70936,7 @@ var Login = /*#__PURE__*/function (_React$Component) {
       var _this$state = this.state,
           email = _this$state.email,
           password = _this$state.password;
-      axios__WEBPACK_IMPORTED_MODULE_4___default.a.post('login', {
+      axios__WEBPACK_IMPORTED_MODULE_4___default.a.post('api/login', {
         email: email,
         password: password
       }).then(function (res) {
