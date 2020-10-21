@@ -107,17 +107,12 @@ class PDFController extends Controller
         <img src="'.$img3.'" width="150px" height="150px"  />
         </div>
         </div>
-<<<<<<< HEAD
         
         
         </body>
         </html>
         ';
    
-=======
-        </div>';
-
->>>>>>> 06a11b5782614c16c52f327cb868333dd0369667
     }
 
 }
