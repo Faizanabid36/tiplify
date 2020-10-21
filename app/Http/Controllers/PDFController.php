@@ -12,7 +12,7 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Storage;
 class PDFController extends Controller
 {
-    
+
     public function view_pdf()
     {
         $user = User::whereId(auth()->user()->id)->with('restaurant')->first();
@@ -56,12 +56,12 @@ class PDFController extends Controller
 //      <h1 style="margin-left:80px">'.$user->restaurant->firmname.'</h1>
 //      <img src="'.$svg.'" style="margin-left:50px" width="150px" height="200px" alt="qrcode">
 //      </div>
-    
+
 //      <img src="'.$img2.'" alt="qrcode"  >
-        
+
 //      </div>
 //      <div class="row justify-content-left">
-        
+
 //      </div>
 //  </div>';
         //$path=Methods::get_path('/qrcodes/'.$user->restaurant->unique_key.'.png');
@@ -107,12 +107,17 @@ class PDFController extends Controller
         <img src="'.$img3.'" width="150px" height="150px"  />
         </div>
         </div>
+<<<<<<< HEAD
         
         
         </body>
         </html>
         ';
    
+=======
+        </div>';
+
+>>>>>>> 06a11b5782614c16c52f327cb868333dd0369667
     }
-    
+
 }

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use LaravelQRCode\Facades\QRCode;
 
 
 /*
@@ -41,4 +42,17 @@ Route::name('pdf.')->prefix('pdf')->middleware(['auth', 'verified'])->group(func
 Route::get('myapp', function () {
     return view('myapp');
 });
-Route::view('/{path?}', 'myapp');
+Route::get('testing_here', function () {
+    $img = QRCode::text('QR Code Generator for Laravel!')->png();
+    \Illuminate\Support\Facades\Storage::disk('public')->put('img/rest.png', $img);
+    \QrCode::size(500)
+        ->format('jpg')
+        ->generate('ItSolutionStuff.com', public_path('qrcodes.jpg'));
+    return view('qrCode');
+});
+
+
+
+//Route::view('/{path?}', 'myapp');
+
+
