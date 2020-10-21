@@ -29,8 +29,8 @@
                                 </a>
                             </button>
                             <button class="btn btn-primary">
-                                <a class="text-white" href="{{route('pdf.view')}}">
-                                    View PDF
+                                <a class="text-white" href="{{route('pdf.download')}}">
+                                    Download PDF
                                 </a>
                             </button>
                         </p>
