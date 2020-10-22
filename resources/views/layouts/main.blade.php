@@ -36,7 +36,37 @@
     {{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
 </head>
 <body>
-@yield('nav')
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <img class="logo" src="{{asset('assets/images/image_15.png')}}">
+        
+
+        @if (Route::has('login'))
+            <div >
+                @auth
+                    <!-- <a href="{{ url('/home') }}">Home</a> -->
+                    <button class="mob" style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;"><a  href="{{ url('/home') }}">Home</a> </button>
+                    <button class="mob" style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;"><a class="" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form> </button>
+                                                      
+	    
+                @else
+                    <!-- <a href="{{ route('login') }}">Login</a> -->
+                    <button class="mob" style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;"> <a href=" {{ route('login') }}">Login</a> </button>
+                    <button class="mob" style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;"><a href=" {{ route('restaurant') }}">Register</a></button>
+                @endauth
+            </div>
+        @endif
+      </div>
+    </nav>
 @yield('content')
 @yield('footer')
 
