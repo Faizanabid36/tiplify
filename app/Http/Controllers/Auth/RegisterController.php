@@ -69,6 +69,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+       
         $res = Restaurants::whereId($data['res_id'])->first();
         $filepath = Methods::get_path('/qrcodes/' . $res->unique_key . '.svg');
         if (!file_exists($filepath))

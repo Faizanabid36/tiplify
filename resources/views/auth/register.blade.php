@@ -26,44 +26,28 @@
                     <div class="row">
                         <div class="col-md-12">
                           <div class="form-group">
-                            <input type="text" required class="form-control  @error('name') is-invalid @enderror" name="name" id="name" placeholder="Name" style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
+                            <input type="text" required class="form-control" name="name" id="name" placeholder="Name" style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                             
                         </div>
-                        @error('name')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror  
+                       
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
-                            <input type="text" required class="form-control @error('surname') is-invalid @enderror" name="surname" id="surname" placeholder="Surname" style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
+                            <input type="text" required class="form-control " name="surname" id="surname" placeholder="Surname" style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                           </div>
-                          @error('surname')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                        
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
-                            <input type="text" class="form-control @error('email') is-invalid @enderror" required name="email" id="email" placeholder="Email" style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
+                            <input type="text" class="form-control " required name="email" id="email" placeholder="Email" style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                           </div>
-                          @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                        
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
-                            <input type="password" required class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="Password" style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
+                            <input type="password" required class="form-control " name="password" id="password" placeholder="Password" style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                           </div>
-                          @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                          
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
@@ -72,7 +56,7 @@
                         </div>
                         <div class="col-md-12">
                      <div class="form-group" style="margin-top:10px;">
-                     <button 
+                     <button type="submit"
                      style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
                     Weiter
                 </button>
