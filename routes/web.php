@@ -17,7 +17,7 @@ use LaravelQRCode\Facades\QRCode;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes(['verify' => true]);
 
@@ -36,7 +36,8 @@ Route::get('downlaod', 'HomeController@download')->name('download.xlsx');
 
 Route::name('pdf.')->prefix('pdf')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/', 'PDFController@view_pdf')->name('view');
-    Route::get('download', 'PDFController@download_pdf')->name('download');
+//    Route::get('download', 'PDFController@download_pdf')->name('download');
+    Route::get('download', 'PDFController@view_pdf')->name('download');
 });
 
 Route::get('myapp', function () {

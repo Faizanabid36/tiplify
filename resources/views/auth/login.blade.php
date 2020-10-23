@@ -25,6 +25,11 @@
 
 @section('content')
     <section class="ftco-section bg-light">
+        <div style="display: flex;z-index: 999999;margin-top: 50px;margin-left: 40px;">
+            <a href="{{route('welcome')}}">
+                <img src="{{asset('assets/icons/Vector.svg')}}" alt="">
+            </a>
+        </div>
         <div class="container">
             <div class="row justify-content-center ">
                 <div class="col-md-12">
@@ -36,7 +41,6 @@
 
                                 </div>
                             </div>
-
                             <div class="col-lg-6 col-md-5 d-flex align-items-stretch text-center ">
                                 <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
                                     <h2 style=" text-align: center;  color: white;font-weight: 900; font-size: 50px;">
@@ -74,8 +78,8 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group" style="margin-top:10px;">
-                                                    <button
-                                                        style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
+                                                    <button class="font-weight-bold"
+                                                            style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
                                                         Weiter
                                                     </button>
                                                 </div>
@@ -84,12 +88,12 @@
                                                 <div class="form-group" style="margin-top:10px;">
                                                     <!-- <a href="#" style="color:  #eb295c ">Passwort vergessen?</a> -->
                                                     @if (Route::has('password.request'))
-                                                   <a  style="color:  #eb295c " href="{{ route('password.request') }}">
-                                                        Passwort vergessen?
-                                                   </a>
-                                                     @endif
+                                                        <a style="color: white " href="{{ route('password.request') }}">
+                                                            <u>Passwort vergessen?</u>
+                                                        </a>
+                                                    @endif
                                                 </div>
-                                               
+
                                             </div>
                                         </div>
                                     </form>
