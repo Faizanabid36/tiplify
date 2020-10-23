@@ -54,10 +54,12 @@
                     </form>
                 </button>
             @else
+                @if(\Route::currentRouteName()=='welcome')
                 <button class="mob login_button_hover"
                         style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid white;color: #4ae3c0;">
                     <a style="color:#4AE3C0" class="font-weight-bold" href="{{ route('login') }}">Log in</a>
                 </button>
+                @endif
             @endauth
         </div>
     </div>
