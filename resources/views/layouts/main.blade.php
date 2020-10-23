@@ -38,35 +38,32 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-      <div class="container">
+    <div class="container">
         <img class="logo" src="{{asset('assets/images/image_15.png')}}">
-        
 
-        @if (Route::has('login'))
-            <div >
-                @auth
-                    <!-- <a href="{{ url('/home') }}">Home</a> -->
-                    <button class="mob" style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;"><a  href="{{ url('/home') }}">Home</a> </button>
-                    <button class="mob" style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;"><a class="" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form> </button>
-                                                      
-	    
-                @else
-                    <!-- <a href="{{ route('login') }}">Login</a> -->
-                    <button class="mob" style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;"> <a href=" {{ route('login') }}">Login</a> </button>
-                    <button class="mob" style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;"><a href=" {{ route('restaurant') }}">Register</a></button>
-                @endauth
-            </div>
-        @endif
-      </div>
-    </nav>
+        <div>
+            @auth
+                <button class="mob login_button_hover"
+                        style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
+                    <a style="color: white" href="{{ route('logout') }}"
+                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </button>
+            @else
+                @if(\Route::currentRouteName()=='welcome')
+                <button class="mob login_button_hover"
+                        style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid white;color: #4ae3c0;">
+                    <a style="color:#4AE3C0" class="font-weight-bold" href="{{ route('login') }}">Log in</a>
+                </button>
+                @endif
+            @endauth
+        </div>
+    </div>
+</nav>
 @yield('content')
 @yield('footer')
 

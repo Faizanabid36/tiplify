@@ -2,6 +2,11 @@
 
 @section('content')
     <section class="ftco-section bg-light">
+        <div style="display: flex;z-index: 999999;margin-top: 50px;margin-left: 40px;">
+            <a href="{{route('welcome')}}">
+                <img src="{{asset('assets/icons/Vector.svg')}}" alt="">
+            </a>
+        </div>
         <div class="container">
             <div class="row justify-content-center ">
                 <div class="col-md-12">
@@ -88,7 +93,7 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group" style="margin-top:10px;">
-                                                    <button
+                                                    <button class="font-weight-bold"
                                                         style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
                                                         Weiter
                                                     </button>

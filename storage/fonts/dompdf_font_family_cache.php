@@ -86,4 +86,7 @@
     '800' => $fontDir . '/poppins-800_b387d706d10ede81ad4057845f2af778',
     '900' => $fontDir . '/poppins-900_ca367eaf2c52f159bf339a18e9b39b9a',
   ),
+  'roboto' => array(
+    'normal' => $fontDir . '/roboto-normal_cf99a9d56c411ce3fa8a2fc49c520e74',
+  ),
 ) ?>
