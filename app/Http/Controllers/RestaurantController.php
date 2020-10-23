@@ -23,7 +23,7 @@ class RestaurantController extends Controller
             'state' => 'required|max:50|min:3',
             'plz' => 'required|max:10|min:4',
             'ort' => 'required|max:50|min:3',
-            'telefon' => 'required|max:30|min:3',
+            'telefon' => 'required|max:16|min:3',
         ]);
         $request->merge(['unique_key' => Keygen::alphanum(8)->generate()]);
         $restaurant = Restaurants::updateOrCreate(
