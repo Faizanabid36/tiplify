@@ -17,10 +17,10 @@
                   <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
                     <h2 style=" text-align: center;  color: white;font-weight: 900; font-size: 50px;">Hello {{ $restaurant->firmname }}!</h2>
                     <p class="mb-4" style=" text-align: center;color: white;font-weight: 200;">Angaben zum Unternehmen/Location</p>
-                    
+
                     <form method="POST" id="contactForm" action="{{route('corona_form.submit')}}" name="contactForm" class=" ">
                     @csrf
-                    <input type="hidden" name="res_id" value="{{$restaurant->id}}">  
+                    <input type="hidden" name="res_id" value="{{$restaurant->id}}">
                     <div class="row">
                         <div class="col-md-12">
                           <div class="form-group">
@@ -50,18 +50,18 @@
                                 <span class="check"></span>
                                 <label for="one">Check me.</label>
                               </div>
-                             
+
                             </div>
                           </div>
                         </div>
                         <div class="col-md-12">
-                          <div class="form-group">
+                          <div class="form-group font-weight-bolder">
                             <button  style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">weiter</button>
                           </div>
                         </div>
                       </div>
                     </form>
-                     
+
                   </div>
                 </div>
               </div>
@@ -81,16 +81,16 @@
             <div class="row">
               <div class="col-md-4 mb-md-0 mb-4">
                 <h2 class="footer-heading">Powered by tiplify - das bargelslose Trinkgeld </h2>
-                
-                
+
+
               </div>
-              
+
             </div>
-            
+
           </div>
           <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
             <h2 class="footer-heading">AGB | Datenschutz | Impressum</h2>
-            
+
           </div>
         </div>
       </div>
