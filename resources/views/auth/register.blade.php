@@ -37,7 +37,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     @if(Session::has('errors'))
-                                                        <h6 class="text-danger mb-1 mt-1 font-weight-bold">
+                                                        <h6 class="text-danger mb-2 mt-1 font-weight-bold">
                                                             <strong>{{ ucfirst(Session::get('errors')->first()) }}</strong>
                                                         </h6>
                                                     @endif
