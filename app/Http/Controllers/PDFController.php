@@ -32,18 +32,19 @@ class PDFController extends Controller
     {
         $user = User::whereId(auth()->user()->id)->with('restaurant')->first();
         $pdf = \App::make('dompdf.wrapper');
-        $pdf->loadHTML($this->pdf_data($user))->setPaper('a4','landscape');
+        $pdf->loadHTML($this->pdf_data($user))->setPaper('a4', 'landscape');
         return $pdf->download($user->restaurant->firmname . ".pdf");
-         //return $pdf->stream();
+
+        //return $pdf->stream();
 
     }
     public function pdf_data(User $user)
     {
-        $img = asset('images/1.png');
-        $img2 = asset('images/2.png');
-        $img3 = asset('images/3.png');
-        $logo = asset('assets/images/logo2.png');
-        $img4 = asset('/qrcodes/' . $user->restaurant->unique_key . '.svg');
+        $img = public_path('images/1.png');
+        $img2 = public_path('images/2.png');
+        $img3 = public_path('images/3.png');
+        $logo = public_path('assets/images/logo2.png');
+        $img4 = public_path('/qrcodes/' . $user->restaurant->unique_key . '.svg');
         $link = route('corona_form.view', $user->restaurant->unique_key);
         $firmname = $user->restaurant->firmname;
 
