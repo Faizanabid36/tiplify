@@ -7,11 +7,12 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Restaurants;
 use App\User;
-//use BaconQrCode\Encoder\QrCode;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+
+//use BaconQrCode\Encoder\QrCode;
 
 class RegisterController extends Controller
 {
@@ -74,6 +75,7 @@ class RegisterController extends Controller
         $filepath = Methods::get_path('/qrcodes/' . $res->unique_key . '.svg');
         if (!file_exists($filepath))
             QrCode::size(200)->format('svg')->generate(route('corona_form.view', $res->unique_key), $filepath);
+        request()->session()->flush();
         return User::create([
             'name' => $data['name'],
             'surname' => $data['surname'],
