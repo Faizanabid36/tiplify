@@ -25,9 +25,9 @@ class PDFController extends Controller
         $user = User::whereId(auth()->user()->id)->with('restaurant')->first();
         $pdf = \App::make('dompdf.wrapper');
         $pdf->loadHTML($this->pdf_data($user))->setPaper('a4','landscape');
-       return $pdf->download($user->restaurant->firmname.".pdf");
+       //return $pdf->download($user->restaurant->firmname.".pdf");
         
-         //return $pdf->stream();
+         return $pdf->stream();
 
     }
     public function pdf_data(User $user)

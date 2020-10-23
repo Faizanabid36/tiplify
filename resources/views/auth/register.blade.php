@@ -12,53 +12,6 @@
                                 <div class="contact-wrap w-100 p-md-5 p-4 ">
                                     <img src="{{asset('assets/images/image 16.png')}}" style="width: inherit;">
 
-<<<<<<< HEAD
-                <div class="col-lg-6 col-md-5 d-flex align-items-stretch text-center ">
-                  <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
-                    <h2 style=" text-align: center;  color: white;font-weight: 900; font-size: 50px;">Hello!</h2>
-                    <p class="mb-4" style=" text-align: center;color: white;font-weight: 200;">Angaben zum Unternehmen/Location</p>
-                    
-                    <form method="POST" id="contactForm" action="{{ route('register') }}" name="contactForm" class=" ">
-                    @csrf
-                    <input name="res_id" value="{{ Session::get('resid') }}" hidden> 
-                    <div class="row">
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <input type="text" required class="form-control" name="name" id="name" placeholder="Name" style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
-                            
-                        </div>
-                       
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <input type="text" required class="form-control " name="surname" id="surname" placeholder="Surname" style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
-                          </div>
-                        
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <input type="text" class="form-control " required name="email" id="email" placeholder="Email" style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
-                          </div>
-                        
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <input type="password" required class="form-control " name="password" id="password" placeholder="Password" style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
-                          </div>
-                          
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <input type="password" class="form-control" name="password-confirmation" id="password-confirm" placeholder="Confirm" style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                     <div class="form-group" style="margin-top:10px;">
-                     <button type="submit"
-                     style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
-                    Weiter
-                </button>
-=======
                                 </div>
                             </div>
 
@@ -146,7 +99,6 @@
                                                         style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
                                                         Weiter
                                                     </button>
->>>>>>> 961563c61d198b4e055bddbe53ec1ba43424e363
                                                 </div>
                                             </div>
                                         </div>
