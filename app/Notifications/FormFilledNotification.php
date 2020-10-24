@@ -17,12 +17,12 @@ class FormFilledNotification extends Notification implements ShouldQueue
      * @return void
      */
 
-    public $data;
+    public $restaurant;
 
 
-    public function __construct()
+    public function __construct($restaurant)
     {
-        //
+        $this->restaurant = $restaurant;
     }
 
     /**
@@ -45,9 +45,10 @@ class FormFilledNotification extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('You\'ve filled the form')
-            ->line('You have successfully submitted the form.')
-            ->action('Notification Action', url('/'))
+            ->subject('Thank You for filling the form')
+            ->line('Thank You')
+            ->line('You filled out the form on ' . now()->toFormattedDateString() . ' at ' . now()->format('H:i A') .
+                ' from restaurant ' . ucfirst($this->restaurant->firmname))
             ->line('Thank you for using our application!');
     }
 

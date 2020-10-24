@@ -8911,7 +8911,9 @@ textarea.form-control {
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
-      padding: 6em 0; } }
+      padding: 6em 0;
+    }
+  }
 
 .ftco-bg-dark {
   background: #3c312e; }

@@ -43,6 +43,7 @@
 
         <div>
             @auth
+                @if(\Route::currentRouteName()!='corona_form.submit')
                 <button class="mob login_button_hover"
                         style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
                     <a style="color: white;font-weight:bold ;" href="{{ route('logout') }}"
@@ -53,6 +54,7 @@
                         @csrf
                     </form>
                 </button>
+                @endif
             @else
                 @if(\Route::currentRouteName()=='welcome')
                 <button class="mob login_button_hover"

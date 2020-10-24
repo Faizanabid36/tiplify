@@ -11,15 +11,18 @@ class GuestController extends Controller
 {
     public function fill(Request $request)
     {
-        $this->validate($request,[
-            'name'=>'required|max:64',
-            'vorname'=>'required|max:64',
-            'email'=>'required|max:64|email',
-            'telefon'=>'required|max:18',
+        $this->validate($request, [
+            'name' => 'required|max:30|min:3',
+            'vorname' => 'max:30|min:3',
+            'email' => 'required|max:64|email|min:4',
+            'telefon' => 'required|max:16|min:8',
+            'accept' => 'required'
         ]);
-        $guest = GuestInfo::create($request->except('_token'));
-        $guest->notify(new FormFilledNotification());
-        return back()->withSuccess('You have filled the form');
+        $restaurant = Restaurants::find($request->res_id);
+        $guest = GuestInfo::create($request->except('_token','accept'));
+        $guest->notify(new FormFilledNotification($restaurant));
+        $message = 'filled';
+        return view('form_filled', compact('message','guest','restaurant'));
     }
 
     public function view_form($key)
