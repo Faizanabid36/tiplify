@@ -21,7 +21,8 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('home', 'HomeController@index')->name('home')->middleware(['auth','verified']);
+Route::get('how_it_works', 'HomeController@how_it_works')->name('home')->middleware(['auth','verified']);
 
 
 Route::get('restaurant', 'RestaurantController@create')->name('restaurant');

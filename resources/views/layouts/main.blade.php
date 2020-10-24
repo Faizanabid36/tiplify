@@ -45,7 +45,7 @@
             @auth
                 <button class="mob login_button_hover"
                         style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
-                    <a style="color: white" href="{{ route('logout') }}"
+                    <a style="color: white;font-weight:bold ;" href="{{ route('logout') }}"
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
@@ -90,7 +90,6 @@
 <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
 <script src="{{asset('assets/js/scrollax.min.js')}}"></script>
-{{--<script src="{{asset('assets/js/google-map.js')}}"></script>--}}
 <script src="{{asset('assets/js/main.js')}}"></script>
 <script src="{{ asset('js/app.js') }}" defer></script>
 </body>

@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\CustomClass\Methods;
-use App\User;
 use Maatwebsite\Excel\Facades\Excel;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class HomeController extends Controller
 {
@@ -28,6 +25,12 @@ class HomeController extends Controller
     {
         $user = auth()->user();
         return view('home', compact('user'));
+    }
+
+
+    public function how_it_works()
+    {
+        return view('how_it_works');
     }
 
     public function download()
