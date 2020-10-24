@@ -19,8 +19,10 @@
                               Funktionen und Informationen rund um dein digitales Corona-Formular.</p><br><br><br>
 
                           <button class="font-weight-bold"
-                                  style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 3px solid #4ae3c0;color: white;">
-                              Wie funktioniert’s?
+                                  style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 3px solid #4ae3c0;">
+                              <a class="text-white" href="{{route('how_it_works')}}">
+                                  Wie funktioniert’s?
+                              </a>
                           </button>
                           <br> <br><br>
                           <button class="font-weight-bold"
