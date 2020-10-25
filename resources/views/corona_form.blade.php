@@ -71,22 +71,29 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <div>
-                                                        <div class="box">
-                                                            <input id="one" name="accept" required type="checkbox">
-                                                            <span class="check"></span>
-                                                            <label for="one">Check me.</label>
+                                                <div class="intro-box w-100 d-flex my-3">
+                                                    <div class="icon d-flex align-items-center "
+                                                         style=" border: 2px solid #2b3349;">
+                                                        <div class="round">
+                                                            <input type="checkbox" name="accept" id="checkbox"/>
+                                                            <label for="checkbox"></label>
                                                         </div>
-
+                                                    </div>
+                                                    <div class="text px-3">
+                                                        <h6 style="text-align: justify;"> Hiermit versicherer
+                                                            ich, dass die von mir gemachten Angaben korrekt sind
+                                                            und ich nicht an COVID 19-typischen
+                                                            Krankheitssymptomen (Geruchs- & Geschmacksverlust,
+                                                            Fieber, Husten o. Atemnot) leide oder derzeit unter
+                                                            Quarantäne gestellt bin.</h6>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group font-weight-bolder">
                                                     <button class="font-weight-bold"
-                                                        style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
-                                                        weiter
+                                                            style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
+                                                        Weiter
                                                     </button>
                                                 </div>
                                             </div>

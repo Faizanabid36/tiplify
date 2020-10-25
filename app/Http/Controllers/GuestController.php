@@ -16,8 +16,9 @@ class GuestController extends Controller
             'vorname' => 'max:30|min:3',
             'email' => 'required|max:64|email|min:4',
             'telefon' => 'required|max:16|min:8',
-            'accept' => 'required'
         ]);
+        if(is_null($request->accept))
+            return back()->withErrors(['Please Agree to terms and conditions first']);
         $restaurant = Restaurants::find($request->res_id);
         $guest = GuestInfo::create($request->except('_token','accept'));
         $guest->notify(new FormFilledNotification($restaurant));
