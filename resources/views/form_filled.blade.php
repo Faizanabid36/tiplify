@@ -13,7 +13,7 @@
                                     <h2 style=" text-align: center;  color: white;font-weight: 900; font-size: 50px;">
                                         {{$guest->name}}</h2>
                                     <div style="display: flex" class="mt-1 mb-2">
-                                        <img src="{{asset('assets/images/image 7.jpg')}}" style="margin: 0px auto;" >
+                                        <img src="{{asset('assets/images/image 7.png')}}" style="margin: 0px auto;" >
                                     </div>
                                     <h3 class="mb-4" style=" text-align: center;color: white;font-weight: 600;">{{$guest->name}}, dass du
                                         {{now()->toFormattedDateString()}}, um {{now()->format('H:i A')}} Uhr das digitale Corona-Formular von
