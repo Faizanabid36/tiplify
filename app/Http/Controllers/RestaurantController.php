@@ -25,7 +25,11 @@ class RestaurantController extends Controller
             'ort' => 'required|max:50|min:3',
             'telefon' => 'required|max:16|min:3',
         ]);
-        $request->merge(['unique_key' => Keygen::alphanum(8)->generate()]);
+        if (!Session::has('unique_key'))
+        {
+            $request->merge(['unique_key' => Keygen::alphanum(8)->generate()]);
+        }
+            
         $restaurant = Restaurants::updateOrCreate(
             [
                 'id' => Session::get('resid')
@@ -40,4 +44,20 @@ class RestaurantController extends Controller
         Session::put('telefon', $restaurant->telefon);
         return redirect()->route('register');
     }
+    public function edit(Request $request)
+    {
+            $restaurant=Restaurants::whereId(auth()->user()->restaurant->id)->first();
+            Session::put('resid', $restaurant->id);
+            Session::put('firmname', $restaurant->firmname);
+            Session::put('land', $restaurant->land);
+            Session::put('state', $restaurant->state);
+            Session::put('plz', $restaurant->plz);
+            Session::put('ort', $restaurant->ort);
+            Session::put('telefon', $restaurant->telefon);
+            Session::put('unique_key', $restaurant->unique_key);
+            return view('registerRes');
+       
+       
+    }
+    
 }

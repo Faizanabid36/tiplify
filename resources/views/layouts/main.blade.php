@@ -44,7 +44,29 @@
         <div>
             @auth
                 @if(\Route::currentRouteName()!='corona_form.submit')
+                <form action="{{ route('logout') }}" method="POST">
+                @csrf
                 <button class="mob login_button_hover"
+                        style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
+                        {{ __('Logout') }}
+                   
+                </button>
+                </form>
+                <form action="{{ route('edit.restaurant') }}">
+                <button class="mob login_button_hover"
+                        style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
+                        {{ __('Edit Restaurant Info') }}
+                   
+                </button>
+                </form>
+                <form action="{{ route('edit.login') }}">
+                <button class="mob login_button_hover"
+                        style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
+                        {{ __('Edit Login Info') }}
+                   
+                </button>
+                </form>
+                <!-- <button class="mob login_button_hover"
                         style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
                     <a style="color: white;font-weight:bold ;" href="{{ route('logout') }}"
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -53,14 +75,22 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
-                </button>
+                </button> -->
                 @endif
             @else
                 @if(\Route::currentRouteName()=='welcome')
-                <button class="mob login_button_hover"
+                <!-- <button class="mob login_button_hover"
                         style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid white;color: #4ae3c0;">
                     <a style="color:#4AE3C0" class="font-weight-bold" href="{{ route('login') }}">Log in</a>
+                </button> -->
+                <form action="{{ route('login') }}">
+                @csrf
+                <button class="mob login_button_hover"
+                        style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
+                        {{ __('Login') }}
+                   
                 </button>
+                </form>
                 @endif
             @endauth
         </div>

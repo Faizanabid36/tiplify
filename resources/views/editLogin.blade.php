@@ -1,9 +1,10 @@
 @extends('layouts.main')
 
+
 @section('content')
     <section class="ftco-section bg-light">
         <div style="display: flex;z-index: 999999;margin-top: 50px;margin-left: 40px;">
-            <a href="{{route('welcome')}}">
+            <a href="{{route('restaurant')}}">
                 <img src="{{asset('assets/icons/Vector.svg')}}" alt="">
             </a>
         </div>
@@ -27,10 +28,11 @@
                                         zum
                                         Unternehmen/Location</p>
 
-                                    <form method="POST" action="{{route('restaurant.store')}}" id="contactForm"
+                                    <form method="POST" id="contactForm" action="{{ route('edit.login') }}"
                                           name="contactForm"
                                           class=" ">
                                         @csrf
+                                        <input name="res_id" value="{{ Session::get('resid') }}" hidden>
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
@@ -39,77 +41,72 @@
                                                             <strong>{{ ucfirst(Session::get('errors')->first()) }}</strong>
                                                         </h6>
                                                     @endif
-                                                    @if(Session::has('resid'))
-                                                        <input type="hidden" value="{{Session::get('resid')}}"
-                                                               name="id">
+                                                    @if($errors->has('name'))
+                                                        <div class="error">{{ $errors->first('name') }}</div>
                                                     @endif
-                                                    @if(Session::has('unique_key'))
-                                                        <input type="hidden" value="{{Session::get('unique_key')}}"
-                                                               name="unique_key">
-                                                    @endif
-                                                    <input type="text" class="form-control" name="firmname"
-                                                           id="firmname"
-                                                           placeholder="Firmname"
-                                                           required
-                                                           value="{{Session::get('firmname')??''}}"
+                                                    <input type="text" required
+                                                           class="form-control  @error('name') is-invalid @enderror"
+                                                           name="name"
+                                                           id="name" placeholder="Name" value="{{Session::get('name')??''}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
                                             </div>
-                                            <div class="col-md-12">
+                                            <div class="col-md-12 mb-4">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" maxlength="30" minlength="3"
-                                                           required
-                                                           name="land" id="land" placeholder="Land"
-                                                           value="{{Session::get('land')??''}}"
+                                                    <input type="text" required
+                                                           class="form-control @error('surname') is-invalid @enderror"
+                                                           name="surname" id="surname" placeholder="Surname" value="{{Session::get('surname')??''}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
+                                                @error('surname')
+                                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                                @enderror
                                             </div>
-                                            <div class="col-md-12">
+                                            <div class="col-md-12 mt-5">
                                                 <div class="form-group">
-                                                    <input maxlength="50" minlength="5" required type="text"
-                                                           class="form-control"
-                                                           value="{{Session::get('state')??''}}"
-                                                           name="state" id="state" placeholder="State"
+                                                    <input type="text"
+                                                           class="form-control @error('email') is-invalid @enderror"
+                                                           required name="email" disabled id="email" placeholder="Email" value="{{Session::get('email')??''}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
+                                                @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                                @enderror
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" name="plz" id="plz"
-                                                           placeholder="PLZ"
-                                                           value="{{Session::get('plz')??''}}"
-                                                           maxlength="10" minlength="4" required
+                                                    <input type="password" required
+                                                           class="form-control @error('password') is-invalid @enderror"
+                                                           name="password" id="password" placeholder="Password" value="{{Session::get('password')??''}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
+                                                @error('password')
+                                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                                @enderror
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" name="ort" id="ort"
-                                                           placeholder="ORT"
-                                                           maxlength="30" minlength="3" required
-                                                           value="{{Session::get('ort')??''}}"
-                                                           style="border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" name="telefon" id="telefon"
-                                                           placeholder="Telefon"
-                                                           value="{{Session::get('telefon')??''}}"
-                                                           maxlength="20" minlength="8" required
+                                                    <input type="password" class="form-control"
+                                                           name="password_confirmation" id="password-confirm"
+                                                           placeholder="Confirm" value="{{Session::get('password')??''}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group" style="margin-top:10px;">
-                                                    <button class="font-weight-bold"
-                                                        style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
-                                                        Weiter
+                                                    <button
+                                                        class="font-weight-bold"
+                                                        style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 300px; height: 50px; border: 2px solid #eb295c;color: white;">
+                                                        Registrierung Abschließen
                                                     </button>
                                                 </div>
                                             </div>
-
-
                                         </div>
                                     </form>
 
@@ -124,25 +121,25 @@
 
 @endsection
 @section('footer')
-    <footer class="footer">
-        <div class="container-fluid px-lg-5">
+<footer class="footer">
+      <div class="container-fluid px-lg-5">
+        <div class="row">
+          <div class="col-md-9 py-5">
             <div class="row">
-                <div class="col-md-9 py-5">
-                    <div class="row">
-                        <div class="col-md-4 mb-md-0 mb-4">
-                            <h2 class="footer-heading">Powered by tiplify - das bargelslose Trinkgeld </h2>
+              <div class="col-md-4 mb-md-0 mb-4">
+                <h2 class="footer-heading">Powered by tiplify - das bargelslose Trinkgeld </h2>
 
 
-                        </div>
+              </div>
 
-                    </div>
-
-                </div>
-                <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
-                    <h2 class="footer-heading">AGB | Datenschutz | Impressum</h2>
-
-                </div>
             </div>
+
+          </div>
+          <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
+            <h2 class="footer-heading">AGB | Datenschutz | Impressum</h2>
+
+          </div>
         </div>
+      </div>
     </footer>
 @endsection

@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Http\Request;
+use App\User;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -36,5 +38,29 @@ class HomeController extends Controller
     public function download()
     {
         return Excel::download(new \App\Exports\GuestInfoExport(), 'users.xlsx');
+    }
+    public function edit_login(Request $req)
+    {
+        if ($req->method()=="GET")
+        {
+            
+            $user=User::whereId(auth()->user()->id)->first();
+            Session::put('id', $user->id);
+            Session::put('name', $user->name);
+            Session::put('surname', $user->surname);
+            Session::put('email', $user->email);
+            Session::put('password', $user->password);
+            return view('editLogin');
+        }
+        else
+        {
+            $user = User::updateOrCreate(
+                [
+                    'email' => Session::get('email')
+                ], $req->except('_token')
+            );
+            return redirect()->route('home');
+        }
+       
     }
 }

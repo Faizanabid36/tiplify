@@ -47,7 +47,7 @@
                                                     <input type="text" required
                                                            class="form-control  @error('name') is-invalid @enderror"
                                                            name="name"
-                                                           id="name" placeholder="Name"
+                                                           id="name" placeholder="Name" value="{{Session::get('name')??''}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
                                             </div>
@@ -55,7 +55,7 @@
                                                 <div class="form-group">
                                                     <input type="text" required
                                                            class="form-control @error('surname') is-invalid @enderror"
-                                                           name="surname" id="surname" placeholder="Surname"
+                                                           name="surname" id="surname" placeholder="Surname" value="{{Session::get('surname')??''}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
                                                 @error('surname')
@@ -68,7 +68,7 @@
                                                 <div class="form-group">
                                                     <input type="text"
                                                            class="form-control @error('email') is-invalid @enderror"
-                                                           required name="email" id="email" placeholder="Email"
+                                                           required name="email" id="email" placeholder="Email" value="{{Session::get('email')??''}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
                                                 @error('email')
@@ -81,7 +81,7 @@
                                                 <div class="form-group">
                                                     <input type="password" required
                                                            class="form-control @error('password') is-invalid @enderror"
-                                                           name="password" id="password" placeholder="Password"
+                                                           name="password" id="password" placeholder="Password" value="{{Session::get('password')??''}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
                                                 @error('password')

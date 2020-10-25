@@ -41,6 +41,15 @@ Route::name('pdf.')->prefix('pdf')->middleware(['auth', 'verified'])->group(func
     Route::get('download', 'PDFController@view_pdf')->name('download');
 });
 
+Route::name('edit.')->prefix('edit')->middleware(['auth', 'verified'])->group(function () {
+    Route::get('restaurant', 'RestaurantController@edit')->name('restaurant');
+    Route::get('login', 'HomeController@edit_login')->name('login');
+    Route::post('login', 'HomeController@edit_login')->name('login');
+});
+
+
+
+
 Route::get('myapp', function () {
     return view('myapp');
 });
