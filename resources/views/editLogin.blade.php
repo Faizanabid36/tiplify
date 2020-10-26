@@ -32,7 +32,7 @@
                                           name="contactForm"
                                           class=" ">
                                         @csrf
-                                        <input name="res_id" value="{{ Session::get('resid') }}" hidden>
+                                        <input name="res_id" value="{{$user->id}}" hidden>
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
@@ -47,7 +47,7 @@
                                                     <input type="text" required
                                                            class="form-control  @error('name') is-invalid @enderror"
                                                            name="name"
-                                                           id="name" placeholder="Name" value="{{Session::get('name')??''}}"
+                                                           id="name" placeholder="Name" value="{{$user->name}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
                                             </div>
@@ -55,7 +55,7 @@
                                                 <div class="form-group">
                                                     <input type="text" required
                                                            class="form-control @error('surname') is-invalid @enderror"
-                                                           name="surname" id="surname" placeholder="Surname" value="{{Session::get('surname')??''}}"
+                                                           name="surname" id="surname" placeholder="Surname" value="{{$user->surname}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
                                                 @error('surname')
@@ -64,12 +64,22 @@
                                     </span>
                                                 @enderror
                                             </div>
+                                         
                                             <div class="col-md-12 mt-5">
+                                            
+                                            <label for="">{{$user->email}}</label>
+                                            <br>
+                                            <button
+                                                        class="font-weight-bold"
+                                                        style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 150px; height: 50px; border: 2px solid #eb295c;color: white;">
+                                                        <a href="{{ route('password.request') }}">Change Password</a>
+                                                    </button>
                                                 <div class="form-group">
                                                     <input type="text"
                                                            class="form-control @error('email') is-invalid @enderror"
-                                                           required name="email" disabled id="email" placeholder="Email" value="{{Session::get('email')??''}}"
+                                                           required name="email" hidden id="email" placeholder="Email" value="{{$user->email}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
+                                                          
                                                 </div>
                                                 @error('email')
                                                 <span class="invalid-feedback" role="alert">
@@ -81,7 +91,7 @@
                                                 <div class="form-group">
                                                     <input type="password" required
                                                            class="form-control @error('password') is-invalid @enderror"
-                                                           name="password" id="password" placeholder="Password" value="{{Session::get('password')??''}}"
+                                                           name="password" id="password" hidden placeholder="Password" value="{{$user->password}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
                                                 @error('password')
@@ -90,13 +100,18 @@
                                     </span>
                                                 @enderror
                                             </div>
-                                            <div class="col-md-12">
+                                           
+                                            <br>
+                                            <br>
+                                            <br>
+                                            
+                                           <!-- <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="password" class="form-control"
                                                            name="password_confirmation" id="password-confirm"
-                                                           placeholder="Confirm" value="{{Session::get('password')??''}}"
+                                                           placeholder="Confirm" value="{{$user->password}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group" style="margin-top:10px;">

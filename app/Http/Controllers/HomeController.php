@@ -45,18 +45,18 @@ class HomeController extends Controller
         {
             
             $user=User::whereId(auth()->user()->id)->first();
-            Session::put('id', $user->id);
-            Session::put('name', $user->name);
-            Session::put('surname', $user->surname);
-            Session::put('email', $user->email);
-            Session::put('password', $user->password);
-            return view('editLogin');
+            // Session::put('id', $user->id);
+            // Session::put('name', $user->name);
+            // Session::put('surname', $user->surname);
+            // Session::put('email', $user->email);
+            // Session::put('password', $user->password);
+            return view('editLogin',compact('user'));
         }
         else
         {
             $user = User::updateOrCreate(
                 [
-                    'email' => Session::get('email')
+                    'email' => $req['email']
                 ], $req->except('_token')
             );
             return redirect()->route('home');
