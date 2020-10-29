@@ -36,6 +36,12 @@
 
     #two {
         margin-left: 50px;
+        margin-top:-45px;
+    }
+    
+    #two2 {
+        margin-left: 50px;
+        margin-bottom:15px;
     }
 
     .rotate {
@@ -66,6 +72,17 @@
         right: -250px;
 
     }
+    /* div {
+  width: 100%; 
+  border: 1px solid #000000;
+}
+
+div.a {
+  word-wrap: normal;
+}
+div.b {
+  word-wrap: break-word;
+} */
 
     /*#h {*/
     /*    right: 400px;*/
@@ -83,12 +100,12 @@
                         <div><img src="{{$img4}}" style="height: 200px;width: auto;"></div>
 
                     </div>
-                    <span style="font-weight:600;font-size: 21px;margin-left: 15px;"><a class="text-dark"
-                                                                                        href="{{$link}}">{{$link}}</a></span>
+                    <span style="font-weight:600;font-size: 16px;margin-left: 15px; font-family: 'Poppins', Arial, sans-serif"><a class="text-dark"
+                                                                                        href="{{$link}}">corona.tiplify.de/form/{{$key}}</a></span>
                 </div>
             </div>
 
-            <div class="col-lg-8 ftco-animate" id="two">
+            <div class="col-lg-8 ftco-animate" id="two2">
                 <h4 style="font-weight:normal;">Das papierlose Corona-Formular für unsere Gäste.<br><span
                         style="font-weight: bold; font-style: italic;"> Einfach, sicher, kontaktlos!</span></h4>
                 <div class="row">
@@ -96,27 +113,27 @@
                         <div class="text pl-md-5">
 
                             <div class="story-wrap d-md-flex align-items-center">
-                                <div><img src="{{$img}}" style="height: 150px;width: auto;"></div>
+                                <div><img src="{{$img}}" style="height: 150px;width: auto;margin-left:-30px;"></div>
                             </div>
-                            <h6 style="font-weight:500;">1. QR-Code <br>scannen oder URL <br> eingeben.</h6>
+                            <h6 style="font-weight:500; font-family: 'Poppins', Arial, sans-serif">1. QR-Code <br>scannen oder URL <br> eingeben.</h6>
                         </div>
                     </div>
                     <div class="col-lg-3" id="img_pdf2">
                         <div class="text pl-md-5">
 
                             <div class="story-wrap d-md-flex align-items-center">
-                                <div><img src="{{$img2}}" style="height: 150px;width: auto;"></div>
+                                <div><img src="{{$img2}}" style="height: 150px;width: auto;margin-left:-50px;"></div>
                             </div>
-                            <h6 style="font-weight:500;">2. Formular<br> ausfüllen und <br> absenden.</h6>
+                            <h6 style="font-weight:500; font-family: 'Poppins', Arial, sans-serif;margin-left:-30px;">2. Formular<br> ausfüllen und <br> absenden.</h6>
                         </div>
                     </div>
                     <div class="col-lg-5" id="img_pdf3">
                         <div class="text pl-md-5">
 
                             <div class="story-wrap d-md-flex align-items-center">
-                                <div><img src="{{$img3}}" style="height: 150px;width: auto;"></div>
+                                <div><img src="{{$img3}}" style="height: 150px;width: auto;margin-left:-70px;"></div>
                             </div>
-                            <h6 style="font-weight:500;">3.Formular ausfüllen und absenden.</h6>
+                            <h6 style="font-weight:500; font-family: 'Poppins', Arial, sans-serif;margin-left:-45px;">3.Formular ausfüllen und absenden.</h6>
                         </div>
                         <div id="logo1">
                             <img src="{{$logo}}" style="height: 50px;width: inherit;">
@@ -135,12 +152,14 @@
         <div class="row ">
             <div id="qrcode">
                 <div class="col-lg-4 ftco-animate">
-                    <h2 style="font-weight:600; font-family: 'Poppins', Arial, sans-serif" id="h">{{$firmname}}</h2>
+                    <h2 style="font-weight:600; font-family: 'Poppins', Arial, sans-serif" id="h" class="b">{{$firmname}}</h2>
+                   
                     <div class="story-wrap d-md-flex align-items-center">
                         <div><img src="{{$img4}}" style="height: 190px;width: auto;"></div>
                     </div>
-                    <h1 style="font-weight:600;font-size: 20px;"><a href="{{$link}}">{{$link}}</a>
-                    </h1>
+                    <span style="font-weight:600;font-size: 16px;margin-left: 15px; font-family: 'Poppins', Arial, sans-serif"><a class="text-dark"
+                                                                                        href="{{$link}}">corona.tiplify.de/form/{{$key}}</a></span>
+              
                 </div>
             </div>
 
@@ -152,26 +171,26 @@
                         <div class="text pl-md-5">
 
                             <div class="story-wrap d-md-flex align-items-center">
-                                <div><img src="{{$img}}" style="height: 150px;"></div>
+                                <div><img src="{{$img}}" style="height: 150px; margin-left:-30px;"></div>
                             </div>
-                            <h6 style="font-weight:500;">1. QR-Code <br>scannen oder URL <br> eingeben.</h6>
+                            <h6 style="font-weight:500; font-family: 'Poppins', Arial, sans-serif">1. QR-Code <br>scannen oder URL <br> eingeben.</h6>
                         </div>
                     </div>
                     <div class="col-lg-3" id="img_pdf2">
                         <div class="text pl-md-5">
                             <div class="story-wrap d-md-flex align-items-center">
-                                <div><img src="{{$img2}}" style="height: 150px;width: auto;"></div>
+                                <div><img src="{{$img2}}" style="height: 150px;width: auto; margin-left:-50px;"></div>
                             </div>
-                            <h6 style="font-weight:500;">2. Formular<br> ausfüllen und <br> absenden.</h6>
+                            <h6 style="font-weight:500;margin-left:-30px; font-family: 'Poppins', Arial, sans-serif">2. Formular<br> ausfüllen und <br> absenden.</h6>
                         </div>
                     </div>
                     <div class="col-lg-5" id="img_pdf3">
                         <div class="text pl-md-5">
 
                             <div class="story-wrap d-md-flex align-items-center">
-                                <div><img src="{{$img3}}" style="height: 150px;width: auto;"></div>
+                                <div><img src="{{$img3}}" style="height: 150px;width: auto;margin-left:-70px;"></div>
                             </div>
-                            <h6 style="font-weight:500;">3.Formular ausfüllen und absenden.</h6>
+                            <h6 style="font-weight:500;margin-left:-45px; font-family: 'Poppins', Arial, sans-serif;">3.Formular ausfüllen und absenden.</h6>
                         </div>
                         <div id="logo">
                             <img src="{{$logo}}" style="height: 50px;width: inherit;">
