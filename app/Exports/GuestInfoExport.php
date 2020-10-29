@@ -20,7 +20,7 @@ class GuestInfoExport implements FromCollection, WithHeadings
     public function headings(): array
     {
         return [
-            "S.No", "Name", "Vorname", "Email", "Telefon","Filled At"
+            "Name", "Vorname", "Email", "Telefon","Filled At"
         ];
     }
 }
