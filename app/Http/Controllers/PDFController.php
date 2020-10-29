@@ -18,7 +18,7 @@ class PDFController extends Controller
         $img = public_path('images/1.png');
         $img2 = public_path('images/2.png');
         $img3 = public_path('images/3.png');
-        $logo = public_path('assets/images/logo2.png');
+        $logo = public_path('assets/images/logo2.PNG');
         dd($logo);
         $img4 = public_path('/qrcodes/' . $user->restaurant->unique_key . '.svg');
         $link = route('corona_form.view', $user->restaurant->unique_key);
