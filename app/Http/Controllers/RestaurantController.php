@@ -25,7 +25,7 @@ class RestaurantController extends Controller
             'ort' => 'required|max:50|min:3',
             'telefon' => 'required|max:16|min:3',
         ]);
-        $request->merge(['unique_key' => Keygen::alphanum(8)->generate()]);
+        $request->merge(['unique_key' => Keygen::alphanum(6)->generate()]);
 
         $restaurant = Restaurants::create($request->except('_token'));
         Session::put('resid', $restaurant->id);
