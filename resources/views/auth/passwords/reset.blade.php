@@ -21,7 +21,7 @@
                             <div class="col-lg-6 col-md-5 d-flex align-items-stretch text-center ">
                                 <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
                                     <h2 style=" text-align: center;  color: white;font-weight: 900; font-size: 50px;">
-                                        Reset Password
+                                        Passwort zurücksetzen
                                     </h2>
                                     <!-- <p class="mb-4" style=" text-align: center;color: white;font-weight: 200;">Angaben zum Unternehmen/Location</p> -->
                                     @if(Session::has('errors'))

@@ -73,18 +73,18 @@
                                                     <button
                                                         class="font-weight-bold"
                                                         style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 300px; height: 50px; border: 2px solid #eb295c;color: white;">
-                                                        Update Changes
+                                                        Änderungen aktualisieren
                                                     </button>
                                                 </div>
                                                 <div class="mt-2 mb-2">
-                                                    <span><b>OR</b></span>
+                                                    <span><b>Oder</b></span>
                                                 </div>
                                                 <div>
                                                     <button
                                                         class="font-weight-bold"
                                                         style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 185px; height: 50px; border: 2px solid #eb295c;color: white;">
-                                                        <a class="text-white" href="{{ route('password.request') }}">Change
-                                                            Password</a>
+                                                        <a class="text-white" href="{{ route('password.request') }}">Passwort
+                                                            ändern</a>
                                                     </button>
                                                 </div>
                                             </div>
