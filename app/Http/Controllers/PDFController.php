@@ -23,9 +23,8 @@ class PDFController extends Controller
         $link = route('corona_form.view', $user->restaurant->unique_key);
         $firmname = $user->restaurant->firmname;
         $data = compact('user', 'img', 'img2', 'img3', 'img4', 'link', 'logo', 'firmname', 'key');
-        return PDF::loadHTML(view('pdf_view', $data))->setPaper('a4','landscape')->stream('download.pdf');
-//        $pdf = PDF::loadView('pdf_view', );
-//        return $pdf->download('medium.pdf');
+        return PDF::loadHTML(view('pdf_view', $data))->setPaper('a4', 'landscape')->download('download.pdf');
+
 //        return view('pdf_view', compact('user', 'img', 'img2', 'img3', 'img4', 'link', 'logo', 'firmname', 'key'));
     }
     public function download_pdf()

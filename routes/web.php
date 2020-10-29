@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use LaravelQRCode\Facades\QRCode;
 
 
 /*
@@ -27,13 +26,13 @@ Route::get('how_it_works', 'HomeController@how_it_works')->name('how_it_works')-
 
 Route::get('restaurant', 'RestaurantController@create')->name('restaurant');
 Route::post('restaurant', 'RestaurantController@store')->name('restaurant.store');
+Route::get('download', 'HomeController@download')->name('download.xlsx');
+
 
 Route::name('corona_form.')->prefix('form')->group(function () {
     Route::get('{key}', 'GuestController@view_form')->name('view');
     Route::post('submit', 'GuestController@fill')->name('submit');
 });
-
-Route::get('downlaod', 'HomeController@download')->name('download.xlsx');
 
 Route::name('pdf.')->prefix('pdf')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/', 'PDFController@view_pdf')->name('view');
@@ -43,27 +42,9 @@ Route::name('pdf.')->prefix('pdf')->middleware(['auth', 'verified'])->group(func
 
 Route::name('edit.')->prefix('edit')->middleware(['auth', 'verified'])->group(function () {
     Route::get('restaurant', 'RestaurantController@edit')->name('restaurant');
-    Route::get('login', 'HomeController@edit_login')->name('login');
+    Route::post('restaurant', 'RestaurantController@update')->name('restaurant.update');
+    Route::get('login', 'HomeController@edit_login_view')->name('login');
     Route::post('login', 'HomeController@edit_login')->name('login');
 });
-
-
-
-
-Route::get('myapp', function () {
-    return view('myapp');
-});
-Route::get('testing_here', function () {
-    $img = QRCode::text('QR Code Generator for Laravel!')->png();
-    \Illuminate\Support\Facades\Storage::disk('public')->put('img/rest.png', $img);
-    \QrCode::size(500)
-        ->format('jpg')
-        ->generate('ItSolutionStuff.com', public_path('qrcodes.jpg'));
-    return view('qrCode');
-});
-
-
-
-//Route::view('/{path?}', 'myapp');
 
 

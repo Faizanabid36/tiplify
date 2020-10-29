@@ -27,7 +27,7 @@
                                         zum
                                         Unternehmen/Location</p>
 
-                                    <form method="POST" action="{{route('restaurant.store')}}" id="contactForm"
+                                    <form method="POST" action="{{route('edit.restaurant.update')}}" id="contactForm"
                                           name="contactForm"
                                           class=" ">
                                         @csrf
@@ -39,19 +39,17 @@
                                                             <strong>{{ ucfirst(Session::get('errors')->first()) }}</strong>
                                                         </h6>
                                                     @endif
-                                                    @if(Session::has('resid'))
-                                                        <input type="hidden" value="{{Session::get('resid')}}"
-                                                               name="id">
+                                                    @if(Session::has('success'))
+                                                        <h6 class="text-success mb-2 mt-1 font-weight-bold">
+                                                            <strong>{{ ucfirst(Session::get('success')) }}</strong>
+                                                        </h6>
                                                     @endif
-                                                    @if(Session::has('unique_key'))
-                                                        <input type="hidden" value="{{Session::get('unique_key')}}"
-                                                               name="unique_key">
-                                                    @endif
+                                                    <input type="hidden" name="id" value="{{$restaurant->id}}">
                                                     <input type="text" class="form-control" name="firmname"
                                                            id="firmname"
                                                            placeholder="Firmname"
                                                            required
-                                                           value="{{Session::get('firmname')??''}}"
+                                                           value="{{$restaurant->firmname}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
                                             </div>
@@ -60,7 +58,7 @@
                                                     <input type="text" class="form-control" maxlength="30" minlength="3"
                                                            required
                                                            name="land" id="land" placeholder="Land"
-                                                           value="{{Session::get('land')??''}}"
+                                                           value="{{$restaurant->land}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
                                             </div>
@@ -68,7 +66,7 @@
                                                 <div class="form-group">
                                                     <input maxlength="50" minlength="5" required type="text"
                                                            class="form-control"
-                                                           value="{{Session::get('state')??''}}"
+                                                           value="{{$restaurant->state}}"
                                                            name="state" id="state" placeholder="State"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
@@ -77,7 +75,7 @@
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" name="plz" id="plz"
                                                            placeholder="PLZ"
-                                                           value="{{Session::get('plz')??''}}"
+                                                           value="{{$restaurant->plz}}"
                                                            maxlength="10" minlength="4" required
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
@@ -87,7 +85,7 @@
                                                     <input type="text" class="form-control" name="ort" id="ort"
                                                            placeholder="ORT"
                                                            maxlength="30" minlength="3" required
-                                                           value="{{Session::get('ort')??''}}"
+                                                           value="{{$restaurant->ort}}"
                                                            style="border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
                                             </div>
@@ -95,7 +93,7 @@
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" name="telefon" id="telefon"
                                                            placeholder="Telefon"
-                                                           value="{{Session::get('telefon')??''}}"
+                                                           value="{{$restaurant->telefon}}"
                                                            maxlength="20" minlength="8" required
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
@@ -103,8 +101,8 @@
                                             <div class="col-md-12">
                                                 <div class="form-group" style="margin-top:10px;">
                                                     <button class="font-weight-bold"
-                                                        style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
-                                                        Weiter
+                                                            style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
+                                                        Update Changes
                                                     </button>
                                                 </div>
                                             </div>
@@ -118,5 +116,4 @@
             </div>
         </div>
     </section>
-
 @endsection

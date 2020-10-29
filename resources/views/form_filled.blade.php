@@ -11,7 +11,8 @@
                             <div class="col-lg-12 col-md-7 order-md-last d-flex align-items-stretch">
                                 <div class="contact-wrap w-100 p-md-5 p-4 ">
                                     <h2 style=" text-align: center;  color: white;font-weight: 900; font-size: 50px;">
-                                        {{$guest->name}}</h2>
+                                        Vielen Dank
+                                    </h2>
                                     <div style="display: flex" class="mt-1 mb-2">
                                         <img src="{{asset('assets/images/image 7.png')}}" style="margin: 0px auto;" >
                                     </div>
@@ -30,29 +31,4 @@
             </div>
         </div>
     </section>
-@endsection
-
-@section('footer')
-    <footer class="footer mt-4">
-        <div class="container-fluid px-lg-5">
-            <div class="row">
-                <div class="col-md-9 py-5">
-                    <div class="row">
-                        <div class="col-md-4 mb-md-0 mb-4">
-                            <h2 class="footer-heading">Powered by tiplify - das bargelslose Trinkgeld </h2>
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
-                    <h2 class="footer-heading">AGB | Datenschutz | Impressum</h2>
-
-                </div>
-            </div>
-        </div>
-    </footer>
-
 @endsection

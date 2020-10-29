@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
-use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -39,28 +38,25 @@ class HomeController extends Controller
     {
         return Excel::download(new \App\Exports\GuestInfoExport(), 'users.xlsx');
     }
-    public function edit_login(Request $req)
+
+    public function edit_login_view(Request $request)
     {
-        if ($req->method()=="GET")
-        {
-            
-            $user=User::whereId(auth()->user()->id)->first();
-            // Session::put('id', $user->id);
-            // Session::put('name', $user->name);
-            // Session::put('surname', $user->surname);
-            // Session::put('email', $user->email);
-            // Session::put('password', $user->password);
-            return view('editLogin',compact('user'));
+        return view('editLogin');
+    }
+
+    public function edit_login(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'surname' => 'required',
+        ]);
+        if (auth()->user()->email != $request->email) {
+            $this->validate($request, [
+                'email' => 'required|unique:users',
+            ]);
         }
-        else
-        {
-            $user = User::updateOrCreate(
-                [
-                    'email' => $req['email']
-                ], $req->except('_token')
-            );
-            return redirect()->route('home');
-        }
-       
+        User::updateOrCreate(['id' => auth()->user()->id], $request->except('_token'));
+        return back()->withSuccess('Updated Successfully');
+
     }
 }

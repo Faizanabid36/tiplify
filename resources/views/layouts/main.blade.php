@@ -41,55 +41,39 @@
     <div class="container">
         <img class="logo" src="{{asset('assets/images/image_15.png')}}">
 
-        <div>
+        <div class="d-inline-flex">
             @auth
                 @if(\Route::currentRouteName()!='corona_form.submit')
-                <form action="{{ route('logout') }}" method="POST">
-                @csrf
+                    <form class="ml-2" action="{{ route('edit.restaurant') }}">
                 <button class="mob login_button_hover"
-                        style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
-                        {{ __('Logout') }}
-                   
+                        style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 310px; height: 50px; border: 2px solid #4ae3c0;color: white;">
+                    {{ __('Restaurant-Informationen bearbeiten') }}
+
                 </button>
                 </form>
-                <form action="{{ route('edit.restaurant') }}">
-                <button class="mob login_button_hover"
-                        style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
-                        {{ __('Edit Restaurant Info') }}
-                   
-                </button>
-                </form>
-                <form action="{{ route('edit.login') }}">
-                <button class="mob login_button_hover"
-                        style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
-                        {{ __('Edit Login Info') }}
-                   
-                </button>
-                </form>
-                <!-- <button class="mob login_button_hover"
-                        style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
-                    <a style="color: white;font-weight:bold ;" href="{{ route('logout') }}"
-                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
+                    <form class="ml-2" action="{{ route('edit.login') }}">
+                        <button class="mob login_button_hover"
+                                style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 260px; height: 50px; border: 2px solid #4ae3c0;color: white;">
+                            {{ __('Login-Informationen bearbeiten') }}
+                        </button>
                     </form>
-                </button> -->
+                    <form class="ml-2" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class="mob login_button_hover"
+                                style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 120px; height: 50px; border: 2px solid #4ae3c0;color: white;">
+                            {{ __('Logout') }}
+
+                        </button>
+                    </form>
                 @endif
             @else
                 @if(\Route::currentRouteName()=='welcome')
-                <!-- <button class="mob login_button_hover"
-                        style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid white;color: #4ae3c0;">
-                    <a style="color:#4AE3C0" class="font-weight-bold" href="{{ route('login') }}">Log in</a>
-                </button> -->
-                <form action="{{ route('login') }}">
-                @csrf
-                <button class="mob login_button_hover"
-                        style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
-                        {{ __('Login') }}
-                   
-                </button>
+                    <form action="{{ route('login') }}">
+                        @csrf
+                        <button class="mob login_button_hover"
+                                style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
+                            {{ __('Login') }}
+                        </button>
                 </form>
                 @endif
             @endauth
@@ -97,8 +81,23 @@
     </div>
 </nav>
 @yield('content')
-@yield('footer')
+<footer class="footer">
+    <div class="container-fluid px-lg-5">
+        <div class="row">
+            <div class="col-md-9 py-5">
+                <div class="row">
+                    <div class="col-md-4 mb-md-0 mb-4">
+                        <h2 class="footer-heading">Powered by tiplify - das bargeldlose Trinkgeld </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
+                <h2 class="footer-heading">AGB | Datenschutz | Impressum</h2>
 
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 <!-- loader -->

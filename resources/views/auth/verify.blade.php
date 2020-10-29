@@ -46,28 +46,3 @@
     </section>
 @endsection
 
-@section('footer')
-    <footer class="footer mt-4">
-        <div class="container-fluid px-lg-5">
-            <div class="row">
-                <div class="col-md-9 py-5">
-                    <div class="row">
-                        <div class="col-md-4 mb-md-0 mb-4">
-                            <h2 class="footer-heading">Powered by tiplify - das bargelslose Trinkgeld </h2>
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
-                    <h2 class="footer-heading">AGB | Datenschutz | Impressum</h2>
-
-                </div>
-            </div>
-        </div>
-    </footer>
-
-@endsection
-

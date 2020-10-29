@@ -16,10 +16,13 @@
                             <div class="col-lg-6 col-md-5 d-flex align-items-stretch text-center ">
                                 <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
                                     <h2 style=" text-align: center;  color: white;font-weight: 900; font-size: 50px;">
-                                        Hello {{ $restaurant->firmname }}!</h2>
-                                    <p class="mb-4" style=" text-align: center;color: white;font-weight: 200;">Angaben
-                                        zum
-                                        Unternehmen/Location</p>
+                                        Willkommen in {{ $restaurant->firmname }}!</h2>
+                                    <p class="mb-4" style=" text-align: left;color: white;font-weight: 200;font-size: 21px">Bitte
+                                        füllen Sie unser digitales Corona Meldefomular aus. Ihre Daten werden DSGVO
+                                        konform gespeichert und nach 30 Tagen automatisch gelöscht.</p>
+                                    <p class="mb-4" style=" text-align: left;color: white;font-weight: 200;font-size: 16px">
+                                        (mit einem* gekennzeichnete Felder sind Pflichtangaben)
+                                    </p>
 
                                     <form method="POST" id="contactForm" action="{{route('corona_form.submit')}}"
                                           name="contactForm" class=" ">
@@ -109,28 +112,4 @@
         </div>
     </section>
 
-@endsection
-
-@section('footer')
-<footer class="footer">
-      <div class="container-fluid px-lg-5">
-        <div class="row">
-          <div class="col-md-9 py-5">
-            <div class="row">
-              <div class="col-md-4 mb-md-0 mb-4">
-                <h2 class="footer-heading">Powered by tiplify - das bargelslose Trinkgeld </h2>
-
-
-              </div>
-
-            </div>
-
-          </div>
-          <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
-            <h2 class="footer-heading">AGB | Datenschutz | Impressum</h2>
-
-          </div>
-        </div>
-      </div>
-    </footer>
 @endsection
