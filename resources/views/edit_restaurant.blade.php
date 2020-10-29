@@ -102,7 +102,7 @@
                                                 <div class="form-group" style="margin-top:10px;">
                                                     <button class="font-weight-bold"
                                                             style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
-                                                        Update Changes
+                                                        Änderungen aktualisieren
                                                     </button>
                                                 </div>
                                             </div>
