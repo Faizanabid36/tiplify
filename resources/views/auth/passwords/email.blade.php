@@ -24,7 +24,7 @@
                                         Passwort zurücksetzen
                                     </h2>
                                     @if (session('status'))
-                                        <h6 class="text-danger mb-1 mt-1 font-weight-bold">
+                                        <h6 class="text-success mb-1 mt-1 font-weight-bold">
                                             {{ session('status') }}
                                         </h6>
                                     @endif

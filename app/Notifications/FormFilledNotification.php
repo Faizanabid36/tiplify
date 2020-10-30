@@ -18,11 +18,13 @@ class FormFilledNotification extends Notification implements ShouldQueue
      */
 
     public $restaurant;
+    public $guest;
 
 
-    public function __construct($restaurant)
+    public function __construct($restaurant, $guest)
     {
         $this->restaurant = $restaurant;
+        $this->guest = $guest;
     }
 
     /**
@@ -45,11 +47,14 @@ class FormFilledNotification extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Thank You for filling the form')
-            ->line('Thank You')
-            ->line('You filled out the form on ' . now()->toFormattedDateString() . ' at ' . now()->format('H:i A') .
-                ' from restaurant ' . ucfirst($this->restaurant->firmname))
-            ->line('Thank you for using our application!');
+            ->subject('Danke ' . ucfirst($this->guest->name))
+            ->line('Danke ' . ucfirst($this->guest->name))
+//            ->line('You filled out the form on ' . now()->toFormattedDateString() . ' at ' . now()->format('H:i A') .
+//                ' from restaurant ' . ucfirst($this->restaurant->firmname))
+            ->line('Du hast das Corona-Formular am ' . now()->toFormattedDateString() . ' um ' . now()->format('H:i A') .
+                ' Uhr im Restaurant ' . ucfirst($this->restaurant->firmname).' ausgefüllt')
+            ->line('Vielen Dank, dass du unsere Anwendung  genutzt hast!')
+            ->line('Bitte zeige diese Bestätigung auf Verlangen dem Servicepersonal');
     }
 
     /**

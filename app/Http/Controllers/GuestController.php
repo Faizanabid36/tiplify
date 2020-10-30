@@ -20,8 +20,8 @@ class GuestController extends Controller
         if(is_null($request->accept))
             return back()->withErrors(['Please Agree to terms and conditions first']);
         $restaurant = Restaurants::find($request->res_id);
-        $guest = GuestInfo::create($request->except('_token','accept'));
-        $guest->notify(new FormFilledNotification($restaurant));
+        $guest = GuestInfo::create($request->except('_token', 'accept'));
+        $guest->notify(new FormFilledNotification($restaurant, $guest));
         $message = 'filled';
         return view('form_filled', compact('message','guest','restaurant'));
     }

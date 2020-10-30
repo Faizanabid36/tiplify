@@ -16,10 +16,20 @@
                                 <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
                                     <h2 style="  color: white;font-weight: 900; font-size: 50px;">Hallo {{$user->name}}
                                         !</h2>
-                                    <p class="mb-4" style="color: white;font-weight: 200;">Hier findest du alle
+                                    <p class="mb-3" style="color: white;font-weight: 200;">Hier findest du alle
                                         wichtigen
                                         Funktionen und Informationen rund um dein digitales Corona-Formular.
-                                    </p><br><br><br>
+                                    </p>
+                                    <span class="mb-2" style="color: white;font-weight: 500;font-size: 16px;">
+                                        Guest Formular:
+                                        <u>
+                                            <a class="text-white "
+                                               href="{{route('corona_form.view',auth()->user()->restaurant->unique_key)}}">
+                                                {{route('corona_form.view',auth()->user()->restaurant->unique_key)}}
+                                            </a>
+                                        </u>
+                                    </span>
+                                    <br><br>
                                     <button class="font-weight-bold"
                                             style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 3px solid #4ae3c0;">
                                         <a class="text-white" href="{{route('how_it_works')}}">
