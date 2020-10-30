@@ -49,8 +49,6 @@ class FormFilledNotification extends Notification implements ShouldQueue
         return (new MailMessage)
             ->subject('Danke ' . ucfirst($this->guest->name))
             ->line('Danke ' . ucfirst($this->guest->name))
-//            ->line('You filled out the form on ' . now()->toFormattedDateString() . ' at ' . now()->format('H:i A') .
-//                ' from restaurant ' . ucfirst($this->restaurant->firmname))
             ->line('Du hast das Corona-Formular am ' . now()->toFormattedDateString() . ' um ' . now()->format('H:i A') .
                 ' Uhr im Restaurant ' . ucfirst($this->restaurant->firmname).' ausgefüllt')
             ->line('Vielen Dank, dass du unsere Anwendung  genutzt hast!')

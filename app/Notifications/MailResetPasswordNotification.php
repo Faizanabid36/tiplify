@@ -47,8 +47,8 @@ class MailResetPasswordNotification extends Notification implements ShouldQueue
             ->subject('Passwort Zurücksetzen')
             ->line("Du erhältst diese E-Mail, weil wir eine Anfrage zum Zurücksetzen des Passworts für dein tplify-Konto erhalten haben.")
             ->action('Passwort Zurücksetzen', route('password.reset', $this->token))
-            ->line('Wenn du keine Passwortzurücksetzung beantragt hast, ist keine weitere Aktion erforderlich.')
-            ->line('Thank you!');
+            ->line('Wenn du keine Passwortzurücksetzung beantragt hast, ist keine weitere Aktion erforderlich.');
+//            ->line('Thank you!');
     }
 
     /**
