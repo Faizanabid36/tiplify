@@ -25,14 +25,14 @@
                               <a class="font-weight-bold" style="color: #4AE3C0" href="{{route('login')}}">Login</a>
                           </button>
                           <br><br>
-                          <button
-                              style=" border-radius: 25px;background-color:#ec295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #ec295c;color: white;">
-                              <a class="text-white font-weight-bold" href="{{route('restaurant')}}">
-                                  Kostenlos registrieren
-                              </a>
-                          </button>
-
-
+                          <form action="{{route('restaurant')}}">
+                              <button
+                                  style=" cursor: pointer;border-radius: 25px;background-color:#ec295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #ec295c;color: white;">
+                                  <a class="text-white font-weight-bold" href="{{route('restaurant')}}">
+                                      Kostenlos registrieren
+                                  </a>
+                              </button>
+                          </form>
                       </div>
                   </div>
               </div>
@@ -40,5 +40,5 @@
           </div>
         </div>
       </div>
-    </section>
+</section>
 @endsection

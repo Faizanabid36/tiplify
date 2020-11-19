@@ -47,27 +47,6 @@
         <div class="d-inline-flex">
             @auth
                 @if(\Route::currentRouteName()!='corona_form.submit')
-                    {{--                    <form class="ml-2" action="{{ route('edit.restaurant') }}">--}}
-                    {{--                        <button class="mob login_button_hover"--}}
-                    {{--                                style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 310px; height: 50px; border: 2px solid #4ae3c0;color: white;">--}}
-                    {{--                            {{ __('Restaurant-Informationen bearbeiten') }}--}}
-
-                    {{--                        </button>--}}
-                    {{--                    </form>--}}
-                    {{--                    <form class="ml-2" action="{{ route('edit.login') }}">--}}
-                    {{--                        <button class="mob login_button_hover"--}}
-                    {{--                                style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 260px; height: 50px; border: 2px solid #4ae3c0;color: white;">--}}
-                    {{--                            {{ __('Login-Informationen bearbeiten') }}--}}
-                    {{--                        </button>--}}
-                    {{--                    </form>--}}
-                    {{--                    <form class="ml-2" action="{{ route('logout') }}" method="POST">--}}
-                    {{--                        @csrf--}}
-                    {{--                        <button class="mob login_button_hover"--}}
-                    {{--                                style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 120px; height: 50px; border: 2px solid #4ae3c0;color: white;">--}}
-                    {{--                            {{ __('Logout') }}--}}
-
-                    {{--                        </button>--}}
-                    {{--                    </form>--}}
                     <div class="btn-group mr-lg-5 dropleft">
                         <button type="button"
                                 style="height: 40px;border: 2px #4ae3c0 solid;color: #4ae3c0;background: #2b3349;border-radius: 25px;width: 140px;font-weight: 500;font-size: 15px;"
@@ -94,7 +73,6 @@
             @else
                 @if(\Route::currentRouteName()=='welcome')
                     <form action="{{ route('login') }}">
-                        @csrf
                         <button class="mob login_button_hover"
                                 style="cursor:pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #4ae3c0;color: white;">
                             {{ __('Login') }}
