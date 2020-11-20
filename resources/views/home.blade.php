@@ -30,43 +30,50 @@
                                         </u>
                                     </span>
                                     <br><br>
-                                    <button class="font-weight-bold"
-                                            style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 3px solid #4ae3c0;">
-                                        <a class="text-white" href="{{route('how_it_works')}}">
-                                            Wie funktioniert’s?
-                                        </a>
-                                    </button>
+                                    <form action="{{route('how_it_works')}}" method="GET">
+                                        <button class="font-weight-bold"
+                                                style="cursor: pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 3px solid #4ae3c0;">
+                                            <a class="text-white" href="{{route('how_it_works')}}">
+                                                Wie funktioniert’s?
+                                            </a>
+                                        </button>
+                                    </form>
                                     <br> <br><br>
-                                    <button class="font-weight-bold"
-                                            style=" border-radius: 25px;background-color: #4ae3c0;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 2px solid #4ae3c0;color: white;">
-                                        <a class="text-white" href="{{route('pdf.download')}}">
-                                            QR-Code abrufen
-                                        </a></button>
+                                    <form action="{{route('pdf.download')}}" method="GET">
+                                        <button class="font-weight-bold"
+                                                style="cursor: pointer; border-radius: 25px;background-color: #4ae3c0;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 2px solid #4ae3c0;color: white;">
+                                            <a class="text-white" href="{{route('pdf.download')}}">
+                                                QR-Code abrufen
+                                            </a></button>
+                                    </form>
                                     <br><br><br>
                                     <div class="row">
                                         <div class="col-lg-6">
+                                            <form action="{{route('download.xlsx')}}" method="GET">
+                                                <button class="font-weight-bold"
+                                                        style="cursor: pointer; border-radius: 25px;background-color: #4ae3c0;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 2px solid #4ae3c0;color: white;">
+                                                    <a class="text-white" href="{{route('download.xlsx')}}">
+                                                        Gästeliste abrufen
+                                                    </a>
+                                                </button>
+                                            </form>
+                                            <br><br><br>
+                                        </div>
+                                        <div class="col-lg-6">
                                             <button class="font-weight-bold"
-                                                    style=" border-radius: 25px;background-color: #4ae3c0;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 2px solid #4ae3c0;color: white;">
-                                                <a class="text-white" href="{{route('download.xlsx')}}">
-                                                    Gästeliste abrufen
-                                      </a></button>
-                                  <br><br><br>
-                              </div>
-                              <div class="col-lg-6">
-                                  <button class="font-weight-bold"
-                                          style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 3px solid #4ae3c0;color: white;">
-                                      Druck-Formular abrufen
-                                  </button>
-                                  <br><br>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+                                                    style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 3px solid #4ae3c0;color: white;">
+                                                Druck-Formular abrufen
+                                            </button>
+                                            <br><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-</section>
+    </section>
 @endsection
 
