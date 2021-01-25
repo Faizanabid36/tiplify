@@ -23,9 +23,7 @@
                                 <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
                                     <h2 style=" text-align: center;  color: white;font-weight: 900; font-size: 50px;">
                                         Hello!</h2>
-                                    <p class="mb-4" style=" text-align: center;color: white;font-weight: 200;">Angaben
-                                        zum
-                                        Unternehmen/Location</p>
+                                    <p class="mb-4" style=" text-align: center;color: white;font-weight: 200;">Edit Restaurant Information</p>
 
                                     <form method="POST" action="{{route('edit.restaurant.update')}}" id="contactForm"
                                           name="contactForm"
@@ -57,7 +55,7 @@
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" maxlength="30" minlength="3"
                                                            required
-                                                           name="land" id="land" placeholder="Land"
+                                                           name="land" id="land" placeholder="Country"
                                                            value="{{$restaurant->land}}"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
                                                 </div>
@@ -74,7 +72,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" name="plz" id="plz"
-                                                           placeholder="PLZ"
+                                                           placeholder="City"
                                                            value="{{$restaurant->plz}}"
                                                            maxlength="10" minlength="4" required
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
@@ -83,7 +81,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" name="ort" id="ort"
-                                                           placeholder="ORT"
+                                                           placeholder="Postal Code"
                                                            maxlength="30" minlength="3" required
                                                            value="{{$restaurant->ort}}"
                                                            style="border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
@@ -92,7 +90,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" name="telefon" id="telefon"
-                                                           placeholder="Telefon"
+                                                           placeholder="Contact"
                                                            value="{{$restaurant->telefon}}"
                                                            maxlength="20" minlength="8" required
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
@@ -102,7 +100,7 @@
                                                 <div class="form-group" style="margin-top:10px;">
                                                     <button class="font-weight-bold"
                                                             style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
-                                                        Änderungen aktualisieren
+                                                        Update changes
                                                     </button>
                                                 </div>
                                             </div>

@@ -15,10 +15,8 @@
                 </div>
                   <div class="col-lg-7 col-md-5 d-flex align-items-stretch text-center">
                       <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
-                          <h2 style=" text-align: center; color: white;font-weight: 900; font-size: 40px;">Das
-                              papierlose Corona-Formular für deine Gäste.</h2>
-                          <p class="mb-4">Mit nur wenigen Klicks zum kostenlosen online Formular zur Erfassung der
-                              Gastdaten inkl. QR-Code.</p>
+                          <h2 style=" text-align: center; color: white;font-weight: 900; font-size: 40px;">The Paperless Corona Form for your Guests.</h2>
+                          <p class="mb-4">With just a few clicks to the free online form for entering guest data including QR code.</p>
                           <img src="{{asset('assets/images/image 17.png')}}" style="width: inherit;"> <br>
                           <button class="large login_button_hover mt-4"
                                   style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid white;color: white;">
@@ -29,7 +27,7 @@
                               <button
                                   style=" cursor: pointer;border-radius: 25px;background-color:#ec295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #ec295c;color: white;">
                                   <a class="text-white font-weight-bold" href="{{route('restaurant')}}">
-                                      Kostenlos registrieren
+                                      Register for free
                                   </a>
                               </button>
                           </form>

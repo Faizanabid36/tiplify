@@ -21,7 +21,7 @@
                             <div class="col-lg-6 col-md-5 d-flex align-items-stretch text-center ">
                                 <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
                                     <h2 style=" text-align: center;  color: white;font-weight: 900; font-size: 50px;">
-                                        Passwort zurücksetzen
+                                        Reset Password
                                     </h2>
                                     @if (session('status'))
                                         <h6 class="text-success mb-1 mt-1 font-weight-bold">
@@ -53,7 +53,7 @@
                                                 <div class="form-group" style="margin-top:10px;">
                                                     <button class="font-weight-bold"
                                                             style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 225px; height: 55px; border: 2px solid #eb295c;color: white;">
-                                                        Link zum Zurücksetzen des Passworts senden
+                                                        Send password reset link
                                                     </button>
                                                 </div>
                                             </div>

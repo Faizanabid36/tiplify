@@ -13,8 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Die Login-Daten sind nicht valide.',
-//    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'throttle' => 'Zu viele Login-Versuche. Bitte versuchen Sie es in :seconds Sekunden erneut.',
+    'failed' => 'The login data is invalid.',
+    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];

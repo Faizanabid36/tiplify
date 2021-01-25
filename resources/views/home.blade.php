@@ -16,12 +16,13 @@
                                 <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
                                     <h2 style="  color: white;font-weight: 900; font-size: 50px;">Hallo {{$user->name}}
                                         !</h2>
-                                    <p class="mb-3" style="color: white;font-weight: 200;">Hier findest du alle
-                                        wichtigen
-                                        Funktionen und Informationen rund um dein digitales Corona-Formular.
+                                    <p class="mb-3" style="color: white;font-weight: 200;">
+                                        You can find them all here
+                                        important
+                                        Functions and information about your digital corona form.
                                     </p>
                                     <span class="mb-2" style="color: white;font-weight: 500;font-size: 16px;">
-                                        Guest Formular:
+                                        Guest form:
                                         <u>
                                             <a class="text-white "
                                                href="{{route('corona_form.view',auth()->user()->restaurant->unique_key)}}">
@@ -34,7 +35,7 @@
                                         <button class="font-weight-bold"
                                                 style="cursor: pointer; border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 3px solid #4ae3c0;">
                                             <a class="text-white" href="{{route('how_it_works')}}">
-                                                Wie funktioniert’s?
+                                                How does it work?
                                             </a>
                                         </button>
                                     </form>
@@ -43,7 +44,7 @@
                                         <button class="font-weight-bold"
                                                 style="cursor: pointer; border-radius: 25px;background-color: #4ae3c0;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 2px solid #4ae3c0;color: white;">
                                             <a class="text-white" href="{{route('pdf.download')}}">
-                                                QR-Code abrufen
+                                                Get the QR code
                                             </a></button>
                                     </form>
                                     <br><br><br>
@@ -53,7 +54,7 @@
                                                 <button class="font-weight-bold"
                                                         style="cursor: pointer; border-radius: 25px;background-color: #4ae3c0;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 2px solid #4ae3c0;color: white;">
                                                     <a class="text-white" href="{{route('download.xlsx')}}">
-                                                        Gästeliste abrufen
+                                                        Retrieve guest list
                                                     </a>
                                                 </button>
                                             </form>
@@ -62,7 +63,7 @@
                                         <div class="col-lg-6">
                                             <button class="font-weight-bold"
                                                     style=" border-radius: 25px;background-color: #2b3349;background-position: left top;background-repeat: repeat; width: 270px; height: 55px; border: 3px solid #4ae3c0;color: white;">
-                                                Druck-Formular abrufen
+                                                Evaluate
                                             </button>
                                             <br><br>
                                         </div>

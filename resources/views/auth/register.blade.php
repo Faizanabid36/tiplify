@@ -24,9 +24,7 @@
                                 <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
                                     <h2 style=" text-align: center;  color: white;font-weight: 900; font-size: 50px;">
                                         Hello!</h2>
-                                    <p class="mb-4" style=" text-align: center;color: white;font-weight: 200;">Angaben
-                                        zum
-                                        Unternehmen/Location</p>
+                                    <p class="mb-4" style=" text-align: center;color: white;font-weight: 200;">Enter Login Information</p>
 
                                     <form method="POST" id="contactForm" action="{{ route('register') }}"
                                           name="contactForm"
@@ -103,7 +101,7 @@
                                                     <button
                                                         class="font-weight-bold"
                                                         style="cursor:pointer; border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 300px; height: 50px; border: 2px solid #eb295c;color: white;">
-                                                        Registrierung Abschließen
+                                                        Complete registration
                                                     </button>
                                                 </div>
                                             </div>

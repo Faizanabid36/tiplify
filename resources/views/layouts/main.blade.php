@@ -57,10 +57,10 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{route('home')}}">Home</a>
                             <a class="dropdown-item" href="{{ route('edit.restaurant') }}">
-                                Restaurant-Informationen bearbeiten
+                                Edit restaurant information
                             </a>
                             <a class="dropdown-item" href="{{ route('edit.login') }}">
-                                Login-Informationen bearbeiten
+                                Edit login information
                             </a>
                             <div class="dropdown-divider"></div>
                             <form action="{{ route('logout') }}" method="POST">
@@ -90,12 +90,12 @@
             <div class="col-md-9 py-5">
                 <div class="row">
                     <div class="col-md-4 mb-md-0 mb-4">
-                        <h2 class="footer-heading">Powered by tiplify - das bargeldlose Trinkgeld </h2>
+                        <h2 class="footer-heading">Powered by Group-SE11  </h2>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
-                <h2 class="footer-heading">AGB | Datenschutz | Impressum</h2>
+                <h2 class="footer-heading">Terms and Conditions Applied</h2>
 
             </div>
         </div>

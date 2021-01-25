@@ -16,12 +16,14 @@
                             <div class="col-lg-6 col-md-5 d-flex align-items-stretch text-center ">
                                 <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
                                     <h2 style=" text-align: center;  color: white;font-weight: 900; font-size: 50px;">
-                                        Willkommen in {{ $restaurant->firmname }}!</h2>
-                                    <p class="mb-4" style=" text-align: left;color: white;font-weight: 200;font-size: 21px">Bitte
-                                        füllen Sie unser digitales Corona Meldefomular aus. Ihre Daten werden DSGVO
-                                        konform gespeichert und nach 30 Tagen automatisch gelöscht.</p>
-                                    <p class="mb-4" style=" text-align: left;color: white;font-weight: 200;font-size: 16px">
-                                        (mit einem* gekennzeichnete Felder sind Pflichtangaben)
+                                        Welcome to {{ $restaurant->firmname }}!</h2>
+                                    <p class="mb-4"
+                                       style=" text-align: left;color: white;font-weight: 200;font-size: 21px">
+                                        Please fill out our digital corona reporting form. Your data will be stored in
+                                        compliance with the GDPR and automatically deleted after 30 days.</p>
+                                    <p class="mb-4"
+                                       style=" text-align: left;color: white;font-weight: 200;font-size: 16px">
+                                        (Fields marked with an * are mandatory)
                                     </p>
 
                                     <form method="POST" id="contactForm" action="{{route('corona_form.submit')}}"
@@ -47,7 +49,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" name="vorname" id="vorname"
-                                                           placeholder="Vorname"
+                                                           placeholder="Sirname"
                                                            minlength="3"
                                                            maxlength="30"
                                                            style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
@@ -66,7 +68,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" name="telefon" id="telefon"
-                                                           placeholder="Telefon"
+                                                           placeholder="Phone"
                                                            required
                                                            minlength="8"
                                                            maxlength="16"
@@ -83,12 +85,11 @@
                                                         </div>
                                                     </div>
                                                     <div class="text px-3">
-                                                        <h6 style="text-align: justify;"> Hiermit versicherer
-                                                            ich, dass die von mir gemachten Angaben korrekt sind
-                                                            und ich nicht an COVID 19-typischen
-                                                            Krankheitssymptomen (Geruchs- & Geschmacksverlust,
-                                                            Fieber, Husten o. Atemnot) leide oder derzeit unter
-                                                            Quarantäne gestellt bin.</h6>
+                                                        <h6 style="text-align: justify;"> I confirm that the information
+                                                            I have provided is correct and I do not suffer from COVID 19
+                                                            typical Disease symptoms (loss of smell and taste, Fever,
+                                                            cough or shortness of breath) suffer or currently suffer
+                                                            from Quarantined.</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -96,7 +97,7 @@
                                                 <div class="form-group font-weight-bolder">
                                                     <button class="font-weight-bold"
                                                             style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
-                                                        Weiter
+                                                        Continue
                                                     </button>
                                                 </div>
                                             </div>
