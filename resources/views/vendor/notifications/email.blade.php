@@ -43,16 +43,16 @@
 @if (! empty($salutation))
 {{ $salutation }}
 @else
-@lang('Beste Grüße'),<br>
-{{'Dein tiplify-Team'}}<br>
+@lang('Best regards'),<br>
+{{'Development Team'}}<br>
 @endif
 
 {{-- Subcopy --}}
 @isset($actionText)
 @slot('subcopy')
 @lang(
-    "Wenn du Probleme beim Klicken auf die Schaltfläche \":actionText\" hast, kopiere die untenstehende URL und\n".
-    'füge sie in deinen Webbrowser ein:',
+    "If you have trouble clicking the \" :actionText \" button, copy the URL and paste below\n".
+    'paste it into your web browser:',
     [
         'actionText' => $actionText,
     ]

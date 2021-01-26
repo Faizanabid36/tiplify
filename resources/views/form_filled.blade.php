@@ -17,9 +17,11 @@
                                         <img src="{{asset('assets/images/image 7.png')}}" style="margin: 0px auto;">
                                     </div>
                                     <h3 class="mb-4"
-                                        style=" text-align: center;color: white;font-weight: 600;">{{$guest->name}}, You
-                                        filled the form of {{$restaurant->firmname}} around
-                                        {{now()->toFormattedDateString()}}, {{now()->format('H:i A')}}.</h3>
+                                        style=" text-align: center;color: white;font-weight: 600;">{{$guest->name}}, {{'You filled the form on ' . now()->toFormattedDateString() . ' at ' .
+                                        now()->format('H:i A') .
+                                        ' for Restaurant ' . ucfirst($restaurant->firmname) .
+                                        ' for reservation of ' . $guest->seats . ' seats on date: ' .
+                                        \Carbon\Carbon::parse($guest->date)->toFormattedDateString()}}</h3>
                                     <br>
                                     <h5 class="mb-4"
                                         style=" text-align: center;color: rgb(50 225 193);font-weight: 300;">Please show

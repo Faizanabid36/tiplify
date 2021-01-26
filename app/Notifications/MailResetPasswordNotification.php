@@ -44,10 +44,10 @@ class MailResetPasswordNotification extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Passwort Zurücksetzen')
-            ->line("Du erhältst diese E-Mail, weil wir eine Anfrage zum Zurücksetzen des Passworts für dein tplify-Konto erhalten haben.")
-            ->action('Passwort Zurücksetzen', route('password.reset', $this->token))
-            ->line('Wenn du keine Passwortzurücksetzung beantragt hast, ist keine weitere Aktion erforderlich.');
+            ->subject('Password Reset')
+            ->line("You are receiving this email because we have received a request to reset the password for your tplify account.")
+            ->action('Password Reset', route('password.reset', $this->token))
+            ->line('If you have not requested a password reset, no further action is required.');
 //            ->line('Thank you!');
     }
 

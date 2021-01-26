@@ -29,24 +29,22 @@ class AuthServiceProvider extends ServiceProvider
     {
         VerifyEmail::toMailUsing(function (User $user, string $verificationUrl) {
             return (new MailMessage)
-                ->subject(Lang::get('E-Mail-Adresse bestätigen'))
-                ->line('Hallo ' . ucfirst($user->name))
-                ->line('Bitte klick auf den Button oder Link, um deine E-Mail-Adresse zu bestätigen.')
-                ->action('E-Mail-Adresse bestätigen', $verificationUrl)
-                ->line('Wenn du kein Konto erstellt hast, ist keine weitere Aktion erforderlich.');
+                ->subject(Lang::get('E-Mail-Address Verification'))
+                ->line('Hello ' . ucfirst($user->name))
+                ->line('Please click on the button or link to confirm your email address.')
+                ->action('E-Mail-Address Verification', $verificationUrl)
+                ->line('If you haven\'t created an account, no further action is required.');
         });
 
         ResetPassword::toMailUsing(function (User $user, string $url) {
             $link = url(route('password.reset', $url));
             return (new MailMessage)
-                ->subject('Passwort Zurücksetzen')
-                ->line("Du erhältst diese E-Mail, weil wir eine Anfrage zum Zurücksetzen des Passworts für dein tplify-Konto erhalten haben.")
-                ->action('Passwort Zurücksetzen', $link)
-                ->line('Wenn du keine Passwortzurücksetzung beantragt hast, ist keine weitere Aktion erforderlich.');
+                ->subject('Reset Password')
+                ->line("You are receiving this email because we have received a request to reset the password for your corona guest form account.")
+                ->action('Reset Password', $link)
+                ->line('If you haven\'t created an account, no further action is required.');
         });
 
         $this->registerPolicies();
-
-        //
     }
 }

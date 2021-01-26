@@ -20,6 +20,8 @@ class CreateGuestInfosTable extends Migration
             $table->string('email');
             $table->bigInteger('telefon');
             $table->integer('res_id');
+            $table->string('date');
+            $table->integer('seats');
             $table->timestamps();
         });
     }

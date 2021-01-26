@@ -76,6 +76,23 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="number" class="form-control" name="seats" id="seats"
+                                                           placeholder="Number of Seats"
+                                                           required
+                                                           min="1"
+                                                           style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control" name="date" id="date"
+                                                           placeholder="Date"
+                                                           required
+                                                           style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
                                                 <div class="intro-box w-100 d-flex my-3">
                                                     <div class="icon d-flex align-items-center "
                                                          style=" border: 2px solid #2b3349;">

@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -47,12 +48,14 @@ class FormFilledNotification extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Danke ' . ucfirst($this->guest->name))
-            ->line('Danke ' . ucfirst($this->guest->name))
-            ->line('Du hast das Corona-Formular am ' . now()->toFormattedDateString() . ' um ' . now()->format('H:i A') .
-                ' Uhr im Restaurant ' . ucfirst($this->restaurant->firmname).' ausgefüllt')
-            ->line('Vielen Dank, dass du unsere Anwendung  genutzt hast!')
-            ->line('Bitte zeige diese Bestätigung auf Verlangen dem Servicepersonal');
+            ->subject('Thank You ' . ucfirst($this->guest->name))
+            ->line('Thanks ' . ucfirst($this->guest->name))
+            ->line('You filled the form on ' . now()->toFormattedDateString() . ' at ' . now()->format('H:i A') .
+                ' for Restaurant ' . ucfirst($this->restaurant->firmname) .
+                ' for reservation of ' . $this->guest->seats . ' seats on date: ' .
+                Carbon::parse($this->guest->date)->toFormattedDateString())
+            ->line('Thank you for using our application!')
+            ->line('Please show this confirmation to the service staff on request');
     }
 
     /**

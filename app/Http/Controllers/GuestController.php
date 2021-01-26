@@ -16,6 +16,8 @@ class GuestController extends Controller
             'vorname' => 'max:30|min:3',
             'email' => 'required|max:64|email|min:4',
             'telefon' => 'required|max:16|min:8',
+            'seats' => 'required|min:1',
+            'date' => 'required',
         ]);
         if(is_null($request->accept))
             return back()->withErrors(['Please Agree to terms and conditions first']);

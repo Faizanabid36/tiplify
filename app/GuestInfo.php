@@ -16,7 +16,7 @@ class GuestInfo extends Model
 
     public static function getExportRecord()
     {
-         return GuestInfo::select('name', 'vorname', 'email', 'telefon', 'created_at')
+         return GuestInfo::select('name', 'vorname', 'email', 'telefon','seats','date', 'created_at')
              ->whereResId(auth()->user()->restaurant->id)
              ->where('created_at', '>', now()->subMonth(1))
              ->orderBy('created_at', 'DESC')->get()->toArray();

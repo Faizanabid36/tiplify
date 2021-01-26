@@ -42,8 +42,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <img class="logo" src="{{asset('assets/images/image_15.png')}}">
-
+        <h1 class="logo" style="color: #4ae3c0;font-size: 48px"><b>Corona Guest Form</b></h1>
         <div class="d-inline-flex">
             @auth
                 @if(\Route::currentRouteName()!='corona_form.submit')
@@ -90,7 +89,7 @@
             <div class="col-md-9 py-5">
                 <div class="row">
                     <div class="col-md-4 mb-md-0 mb-4">
-                        <h2 class="footer-heading">Powered by Group-SE11  </h2>
+                        <h2 class="footer-heading">Developed by Group-SE11  </h2>
                     </div>
                 </div>
             </div>
