@@ -101,7 +101,7 @@ div.b {
 
                     </div>
                     <span style="font-weight:600;font-size: 16px;margin-left: 15px; font-family: 'Poppins', Arial, sans-serif"><a class="text-dark"
-                                                                                        href="{{$link}}">corona.tiplify.de/form/{{$key}}</a></span>
+                                                                                        href="{{$link}}">18.194.242.204//form/{{$key}}</a></span>
                 </div>
             </div>
 
@@ -158,7 +158,7 @@ div.b {
                         <div><img src="{{$img4}}" style="height: 190px;width: auto;"></div>
                     </div>
                     <span style="font-weight:600;font-size: 16px;margin-left: 15px; font-family: 'Poppins', Arial, sans-serif"><a class="text-dark"
-                                                                                        href="{{$link}}">corona.tiplify.de/form/{{$key}}</a></span>
+                                                                                        href="{{$link}}">18.194.242.204//form/{{$key}}</a></span>
 
                 </div>
             </div>

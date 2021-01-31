@@ -47,4 +47,6 @@ Route::name('edit.')->prefix('edit')->middleware(['auth', 'verified'])->group(fu
     Route::post('login', 'HomeController@edit_login')->name('login');
 });
 
+Route::get('evaluate','GuestController@evaluate')->name('evaluate');
+
 

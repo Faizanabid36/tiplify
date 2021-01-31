@@ -24,6 +24,8 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 
     <!-- Scripts -->
@@ -36,7 +38,45 @@
     <!-- Fonts -->
 
     <!-- Styles -->
-    {{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
+    <style>
+        body {
+            background: #F9F9F9;
+        }
+
+        .myaccordion {
+            max-width: 750px;
+            margin: 50px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .myaccordion .card, .myaccordion .card:last-child .card-header {
+            border: none;
+        }
+
+        .myaccordion .card-header {
+            border-bottom-color: #EDEFF0;
+            background: transparent;
+        }
+
+        .myaccordion .fa-stack {
+            font-size: 18px;
+        }
+
+        .myaccordion .btn {
+            width: 100%;
+            font-weight: bold;
+            color: #004987;
+            padding: 0;
+        }
+
+        .myaccordion .btn-link:hover, .myaccordion .btn-link:focus {
+            text-decoration: none;
+        }
+
+        .myaccordion li + li {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -135,5 +175,15 @@
 <script src="{{asset('assets/js/scrollax.min.js')}}"></script>
 <script src="{{asset('assets/js/main.js')}}"></script>
 <script src="{{ asset('js/app.js') }}" defer></script>
+<script>
+    $(document).ready(function () {
+        $("#accordion").on("hide.bs.collapse show.bs.collapse", e => {
+            $(e.target)
+                .prev()
+                .find("i:last-child")
+                .toggleClass("fa-minus fa-plus");
+        });
+    })
+</script>
 </body>
 </html>

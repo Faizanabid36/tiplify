@@ -14,7 +14,7 @@
                             </div>
                             <div class="col-lg-7 col-md-5 d-flex align-items-stretch ">
                                 <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
-                                    <h2 style="  color: white;font-weight: 900; font-size: 50px;">Hallo {{$user->name}}
+                                    <h2 style="  color: white;font-weight: 900; font-size: 50px;">Hello {{$user->name}}
                                         !</h2>
                                     <p class="mb-3" style="color: white;font-weight: 200;">
                                         You can find them all here

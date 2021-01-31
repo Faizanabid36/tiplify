@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class GuestController extends Controller
 {
+
+    public function evaluate(Request $request)
+    {
+        return view('evaluate');
+    }
     public function fill(Request $request)
     {
         $this->validate($request, [
