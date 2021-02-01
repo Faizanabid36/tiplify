@@ -134,8 +134,9 @@
                 </div>
             </div>
             <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
-                <h2 class="footer-heading">Terms and Conditions Applied</h2>
-
+                <h2 class="footer-heading">
+                    <a href="{{route('contact')}}" class="text-white"><u>Contact Us</u></a>
+                    | Terms and Conditions Applied</h2>
             </div>
         </div>
     </div>

@@ -48,5 +48,6 @@ Route::name('edit.')->prefix('edit')->middleware(['auth', 'verified'])->group(fu
 });
 
 Route::get('evaluate','GuestController@evaluate')->name('evaluate');
+Route::get('contact','GuestController@contact')->name('contact');
 
 

@@ -44,7 +44,7 @@
                             <div class="col-lg-6 col-md-5 d-flex align-items-stretch text-center ">
                                 <div class="info-wrap bg-primary w-100 p-md-5 p-4 ">
                                     <h2 style=" text-align: center;  color: white;font-weight: 900; font-size: 50px;">
-                                        Welcome back!</h2>
+                                        Write us your queries, we will get back to you!</h2>
                                     <!-- <p class="mb-4" style=" text-align: center;color: white;font-weight: 200;">Angaben zum Unternehmen/Location</p> -->
                                     @if(Session::has('errors'))
                                         <h6 class="text-danger mb-1 mt-1 font-weight-bold">
@@ -52,57 +52,42 @@
                                         </h6>
                                     @endif
                                     <br>
-                                    <form method="POST" id="contactForm" name="contactForm" action="{{route('login')}}"
+                                    <form method="POST" id="contactForm" name="contactForm"
                                           class="">
                                         <div class="row">
                                             @csrf
+                                            <div class="col-md-12">
+                                                <div class="form-group" style="margin-bottom:30px;">
+                                                    <input type="text" class="form-control" name="full_name"
+                                                           id="full_name"
+                                                           placeholder="Full Name"
+                                                           required
+                                                           maxlength="50"
+                                                           style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 35px; border: 2px solid white;">
+                                                </div>
+                                            </div>
                                             <div class="col-md-12">
                                                 <div class="form-group" style="margin-bottom:30px;">
                                                     <input type="email" class="form-control" name="email" id="email"
                                                            placeholder="Email"
                                                            required
                                                            maxlength="50"
-                                                           style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
+                                                           style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 35px; border: 2px solid white;">
                                                 </div>
                                             </div>
-
                                             <div class="col-md-12">
                                                 <div class="form-group" style="margin-bottom:30px;">
-                                                    <input type="password" class="form-control" name="password"
-                                                           id="password"
-                                                           required
-                                                           minlength="6"
-                                                           placeholder="Password"
-                                                           style=" border-radius: 25px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 55px; border: 2px solid white;">
+                                                    <textarea
+                                                        style=" border-radius: 15px;background-color: white;background-position: left top;background-repeat: repeat; width: 100%; height: 150px; border: 2px solid white;"
+                                                        id="" rows="8">Write your message here...</textarea>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group" style="margin-top:10px;">
                                                     <button class="font-weight-bold"
                                                             style=" border-radius: 25px;background-color: #eb295c;background-position: left top;background-repeat: repeat; width: 200px; height: 50px; border: 2px solid #eb295c;color: white;">
-                                                        Continue
+                                                        Submit
                                                     </button>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group" style="margin-top:10px;">
-                                                    <!-- <a href="#" style="color:  #eb295c ">Passwort vergessen?</a> -->
-                                                    @if (Route::has('password.request'))
-                                                        <a style="color: white " href="{{ route('password.request') }}">
-                                                            <u>Forgot Password?</u>
-                                                        </a>
-                                                    @endif
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group" style="margin-top:10px;">
-                                                    <!-- <a href="#" style="color:  #eb295c ">Passwort vergessen?</a> -->
-                                                    @if (Route::has('password.request'))
-                                                        Do not have an account?
-                                                        <a style="color: white " href="{{ route('restaurant') }}">
-                                                            <u>Register  here</u>
-                                                        </a>
-                                                    @endif
                                                 </div>
                                             </div>
                                         </div>

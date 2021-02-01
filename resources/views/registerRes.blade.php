@@ -106,6 +106,17 @@
                                                     </button>
                                                 </div>
                                             </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group" style="margin-top:10px;">
+                                                    <!-- <a href="#" style="color:  #eb295c ">Passwort vergessen?</a> -->
+                                                    @if (Route::has('password.request'))
+                                                        Already have an account?
+                                                        <a style="color: white " href="{{ route('login') }}">
+                                                            <u>Login  here</u>
+                                                        </a>
+                                                    @endif
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
