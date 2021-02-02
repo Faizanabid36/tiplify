@@ -101,13 +101,13 @@ div.b {
 
                     </div>
                     <span style="font-weight:600;font-size: 16px;margin-left: 15px; font-family: 'Poppins', Arial, sans-serif"><a class="text-dark"
-                                                                                        href="{{$link}}">18.194.242.204//form/{{$key}}</a></span>
+                                                                                        href="{{$link}}">13.59.214.225/form/{{$key}}</a></span>
                 </div>
             </div>
 
             <div class="col-lg-8 ftco-animate" id="two2">
                 <h4 style="font-weight:normal;">The paperless corona form for our guests.<br><span
-                        style="font-weight: bold; font-style: italic;"> Einfach, sicher, kontaktlos!</span></h4>
+                        style="font-weight: bold; font-style: italic;"> Simple, secure, contactless!</span></h4>
                 <div class="row">
                     <div class="col-lg-4" id="img_pdf1">
                         <div class="text pl-md-5">
@@ -158,14 +158,14 @@ div.b {
                         <div><img src="{{$img4}}" style="height: 190px;width: auto;"></div>
                     </div>
                     <span style="font-weight:600;font-size: 16px;margin-left: 15px; font-family: 'Poppins', Arial, sans-serif"><a class="text-dark"
-                                                                                        href="{{$link}}">18.194.242.204//form/{{$key}}</a></span>
+                                                                                        href="{{$link}}">13.59.214.225/form/{{$key}}</a></span>
 
                 </div>
             </div>
 
             <div class="col-lg-8 ftco-animate" id="two">
                 <h4 style="font-weight:normal;">The paperless corona form for our guests.<br><span
-                        style="font-weight: bold; font-style: italic;"> Einfach, sicher, kontaktlos!</span></h4>
+                        style="font-weight: bold; font-style: italic;"> Simple, secure, contactless!</span></h4>
                 <div class="row">
                     <div class="col-lg-4" id="img_pdf1">
                         <div class="text pl-md-5">

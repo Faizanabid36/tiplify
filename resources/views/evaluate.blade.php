@@ -167,7 +167,10 @@
                                     <a href="" class="text-dark"> 8. User Testing</a>
                                 </p>
                                 <p class="page-link">
-                                    <a href="" class="text-dark"> 9. Final Report</a>
+                                    <a href="" class="text-dark"> 9. Team Roles</a>
+                                </p>
+                                <p class="page-link">
+                                    <a href="" class="text-dark"> 10. Final Report</a>
                                 </p>
                             </div>
                         </div>
@@ -201,11 +204,11 @@
                                                 <span><strong class="text-dark">Email: </strong> 17b-044-se@students.uit.edu
                                                 </span>
                                                 <p>
-                                                    <span class="badge bg-primary">WordPress</span>
-                                                    <span class="badge bg-info">Weebly</span>
+                                                    <span class="badge text-white bg-primary">Project Manager</span>
+                                                    <span class="badge text-white bg-info">Designer</span>
                                                     <br>
-                                                    <span class="badge bg-warning">Bootstrap</span>
-                                                    <span class="badge bg-success">Wix</span>
+                                                    <span class="badge text-white bg-warning">Software Engineer</span>
+                                                    <span class="badge text-white bg-success">Architect</span>
                                                 </p>
                                             </div>
                                             <div style="float:right">
@@ -225,11 +228,11 @@
                                                 <span><strong class="text-dark">Email: </strong> 17b-057-se@students.uit.edu
                                                 </span>
                                                 <p>
-                                                    <span class="badge bg-primary">WordPress</span>
-                                                    <span class="badge bg-info">Weebly</span>
+                                                    <span class="badge text-white bg-danger">Project Manager</span>
+                                                    <span class="badge text-white bg-dark">Designer</span>
                                                     <br>
-                                                    <span class="badge bg-warning">Bootstrap</span>
-                                                    <span class="badge bg-success">Wix</span>
+                                                    <span class="badge text-white bg-info">Software Engineer</span>
+                                                    <span class="badge text-white bg-success">Test Engineer</span>
                                                 </p>
                                             </div>
                                             <div class="float-right">
@@ -249,11 +252,10 @@
                                                 <span><strong class="text-dark">Email: </strong> 17b-022-se@students.uit.edu
                                                 </span>
                                                 <p>
-                                                    <span class="badge bg-primary">WordPress</span>
-                                                    <span class="badge bg-info">Weebly</span>
+                                                    <span class="badge text-white bg-info">Software Engineer</span>
+                                                    <span class="badge text-white bg-warning">Test Engineer</span>
                                                     <br>
-                                                    <span class="badge bg-warning">Bootstrap</span>
-                                                    <span class="badge bg-success">Wix</span>
+                                                    <span class="badge text-white bg-danger">Architect</span>
                                                 </p>
                                             </div>
                                             <div class="float-right">
@@ -273,11 +275,11 @@
                                                 <span><strong class="text-dark">Email: </strong> 17b-031-se@students.uit.edu
                                                 </span>
                                                 <p>
-                                                    <span class="badge bg-primary">WordPress</span>
-                                                    <span class="badge bg-info">Weebly</span>
+                                                    <span class="badge text-white bg-warning">Business Analyst</span>
+                                                    <span class="badge text-white bg-dark">Architect</span>
                                                     <br>
-                                                    <span class="badge bg-warning">Bootstrap</span>
-                                                    <span class="badge bg-success">Wix</span>
+                                                    <span class="badge text-white bg-success">Designer</span>
+                                                    <span class="badge text-white bg-info">Test Engineer</span>
                                                 </p>
                                             </div>
                                             <div class="float-right">
