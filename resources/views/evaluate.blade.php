@@ -143,34 +143,31 @@
                              data-parent="#accordion">
                             <div class="card-body">
                                 <p class="page-link">
-                                    <a href="" class="text-dark"> 1. Introduction</a>
+                                    <a href="{{asset('docs/introduction.pdf')}}" download class="text-dark"> 1. Introduction</a>
                                 </p>
                                 <p class="page-link">
-                                    <a href="" class="text-dark"> 2. User Analysis</a>
+                                    <a href="{{asset('docs/task_n_user_analysis.pdf')}}" download class="text-dark"> 2. Task & User Analysis</a>
                                 </p>
                                 <p class="page-link">
-                                    <a href="" class="text-dark"> 3. Task Analysis</a>
+                                    <a href="{{asset('docs/conceptual_design.pdf')}}" download class="text-dark"> 3. Conceptual Design</a>
                                 </p>
                                 <p class="page-link">
-                                    <a href="" class="text-dark"> 4. Conceptual Design</a>
+                                    <a href="{{asset('docs/design_sketches.pdf')}}" download class="text-dark"> 4. Design Sketches</a>
                                 </p>
                                 <p class="page-link">
-                                    <a href="" class="text-dark"> 5. Design Sketches</a>
+                                    <a href="{{asset('docs/prototyping.pdf')}}" download class="text-dark"> 5. Prototyping</a>
                                 </p>
                                 <p class="page-link">
-                                    <a href="" class="text-dark"> 6. Prototyping</a>
+                                    <a href="{{asset('docs/heuristic_evaluation.pdf')}}" download class="text-dark"> 6. Heuristic Evaluation</a>
                                 </p>
                                 <p class="page-link">
-                                    <a href="" class="text-dark"> 7. Heuristic Evaluation</a>
+                                    <a href="{{asset('docs/user_testing.pdf')}}" download class="text-dark"> 7. User Testing</a>
                                 </p>
                                 <p class="page-link">
-                                    <a href="" class="text-dark"> 8. User Testing</a>
+                                    <a href="{{asset('docs/team_roles.pdf')}}" download class="text-dark"> 8. Team Roles</a>
                                 </p>
                                 <p class="page-link">
-                                    <a href="" class="text-dark"> 9. Team Roles</a>
-                                </p>
-                                <p class="page-link">
-                                    <a href="" class="text-dark"> 10. Final Report</a>
+                                    <a href="{{asset('docs/final_report.pdf')}}" download class="text-dark"> 9. Final Report</a>
                                 </p>
                             </div>
                         </div>

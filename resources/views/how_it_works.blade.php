@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <section class="ftco-section mt-5" id="slide_on_mobile">
+    <section class="ftco-section bg-light" id="slide_on_mobile">
 
         <div class="row mob" style="color: white;">
             <div class="col-md-2 d-flex services align-self-stretch px-4 ftco-animate">
