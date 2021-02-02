@@ -1,1 +1,1 @@
-ssh -i "vericx.pem" ubuntu@ec2-18-188-199-138.us-east-2.compute.amazonaws.com
+ssh -i "content_creator.pem" ubuntu@ec2-13-59-214-225.us-east-2.compute.amazonaws.com

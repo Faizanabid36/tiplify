@@ -44,9 +44,9 @@
         }
 
         .myaccordion {
-            max-width: 750px;
             margin: 50px auto;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border-radius: 25px;
         }
 
         .myaccordion .card, .myaccordion .card:last-child .card-header {

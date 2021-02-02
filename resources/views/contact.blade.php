@@ -18,7 +18,6 @@
                     Register
                 </a>
             </button>
-
         </div>
     </nav>
 @endsection
